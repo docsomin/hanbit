@@ -19,7 +19,7 @@ body,h6,p {
 .container{
 	display: block;
 	width: 1140px;
-	height: 800px;
+	height: 720px;
 	margin: auto;
 	background-image: url(../images/login_bg1.png);
 	overflow: hidden;
@@ -37,24 +37,16 @@ section img {
 	display: block;
 	margin: auto;
 }
-section.txt{
-	color: white;
-	text-align: center;
-	margin-top: 150px;
-	margin-bottom: 60px;
-}
-section h6{
-	font-size: 20px;
-	margin-bottom: 20px;
-}
+
 section.input{
 /*	background-color: white;*/
 	border-radius: 10px;
 	width: 500px;
 	height: 230px;
 	margin: auto;
-	margin-top: 150px;
+	margin-top: 107px;
 }
+
 input[type=text], input[type=password] {
 	background: rgba(255, 255, 255, 0.5);
     width: 85%;
