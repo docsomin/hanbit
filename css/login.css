@@ -57,23 +57,24 @@ section.input{
 }
 input[type=text], input[type=password] {
 	background: rgba(255, 255, 255, 0.5);
-    width: 90%;
+    width: 85%;
     padding: 12px 20px;
     margin: 15px 20px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-	/*border-radius: 5px;*/
-    outline: none;
+    border: 0px solid #fff;
+    /*box-sizing: border-box;
+    outline: none;*/
+    /*border-radius: 5px;*/
     font-size: 18px;
     color: white;
+    box-shadow: none;
 }
 input[type=text]:first-child{
 	margin-top:30px;
 
 }
-input[type=text]:focus {
+/*input[type=text]:focus {
     border: 3px solid #ffffff;
-}
+}*/
 input[type=submit]{
 	display: block;
 	background-color: #00AA48;
