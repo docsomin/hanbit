@@ -1,0 +1,93 @@
+@CHARSET "UTF-8";
+/************* Common *************/
+
+@font-face {
+    font-family: 'NotoSans-Regular';
+    src: url(../fonts/NotoSans-Regular.ttf) format('truetype');
+}
+
+body,h6,p {
+	font-family: NotoSans-Regular;
+}
+
+.grad{
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to bottom, #000255, #00021F);
+
+}
+.container{
+	display: block;
+	width: 1140px;
+	height: 800px;
+	margin: auto;
+}
+
+header, section{
+	display: block;
+	margin: auto;
+}
+header{
+	display: block;
+	width: 273px;
+	height: 199px;
+}
+header img{
+	margin-top: 40px;
+}
+section.txt{
+	color: white;
+	text-align: center;
+	margin-top: 150px;
+	margin-bottom: 60px;
+}
+section h6{
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+section.input{
+	background-color: white;
+	border-radius: 10px;
+	width: 500px;
+	height: 380px;
+	margin: auto;
+	margin-top: 90px;
+}
+input[type=text], input[type=password] {
+    width: 90%;
+    padding: 12px 20px;
+    margin: 10px 20px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+	border-radius: 5px;
+    outline: none;
+    font-size: 18px;
+}
+input[type=text]:first-child{
+	margin-top:30px;
+}
+input[type=text]:focus {
+    border: 3px solid #6ACBFF;
+}
+input[type=submit]{
+	display: block;
+	background-color: #00AA48;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: auto;
+    cursor: pointer;
+    font-size: 17px;
+}
+section.login_pg{
+	color: white;
+	text-align: center;
+	font-weight: normal;
+}
+section.login_pg a{
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+}

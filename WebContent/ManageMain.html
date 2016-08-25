@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<style>
+  @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+  body {font-family: 'Nanum Gothic';}
+</style>
+<title>관리 메인</title>
+</head>
+<body>
+
+<nav class="w3-sidenav w3-white w3-card-2 w3-animate-left" style="display:none" id="leftMenu">
+  <a href="javascript:void(0)" onclick="closeLeftMenu()"
+  class="w3-closenav w3-large"> 닫기 &times;</a>
+  <a href="#">상품관리</a>
+  <a href="#">회원관리</a>
+  <a href="#">배송관리</a>
+  <a href="#">게시판관리</a>
+  <a href="#">매출/매입관리</a>
+</nav>
+
+<ul class="w3-navbar w3-black">
+  <li><span class="w3-opennav w3-xlarge" onclick="openLeftMenu()">&#9776;</span></li>
+  <li onclick="openLeftMenu()"><a href="#">홈페이지 이름</a></li>
+  <li><a href="#">상품추가</a></li>
+  <li><a href="#">배송현황</a></li>
+  <li class="w3-right"><a href="#">홈페이지</a></li>
+  <li class="w3-right"><a href="#">홈페이지</a></li>
+  <li class="w3-right"><a href="#">로그아웃</a></li>
+</ul>
+
+<div class="w3-container">
+  <h2 style="padding-left:30px;">알림판</h2>
+  <div class="w3-row-padding">
+  <div class="w3-col s4">
+	<header class="w3-container w3-black w3-border">
+      <h3>최근 결재 내역</h3>
+    </header>
+    <div class="w3-container w3-border">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+  </div>
+  <div class="w3-col s4">
+	<header class="w3-container w3-black w3-border">
+      <h3>신규 게시글</h3>
+    </header>
+    <div class="w3-container w3-border">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+  </div>
+  <div class="w3-col s4">
+	<header class="w3-container w3-black w3-border">
+      <h3>이번 달 매출</h3>
+    </header>
+    <div class="w3-container w3-border">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<br>
+<br>
+
+<div class="w3-container">
+  <div class="w3-row-padding">
+  <div class="w3-col s4">
+	<header class="w3-container w3-black w3-border">
+      <h3>최근 결재 내역</h3>
+    </header>
+    <div class="w3-container w3-border">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+  </div>
+  <div class="w3-col s4">
+	<header class="w3-container w3-black w3-border">
+      <h3>신규 게시글</h3>
+    </header>
+    <div class="w3-container w3-border">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+  </div>
+  <div class="w3-col s4">
+	<header class="w3-container w3-black w3-border">
+      <h3>이번 달 매출</h3>
+    </header>
+    <div class="w3-container w3-border">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+     
+<script>
+function openLeftMenu() {
+    document.getElementById("leftMenu").style.display = "block";
+}
+function closeLeftMenu() {
+    document.getElementById("leftMenu").style.display = "none";
+}
+</script>
+</body>
+</html>
