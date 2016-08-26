@@ -39,7 +39,7 @@ section.input{
 	margin: auto;
 	margin-top: 40px;
 }
-section.warning{
+section#warning{
 	background: rgba(255, 255, 255, 0.5);
 	width: 85%;
 	padding: 10px 20px;
@@ -48,9 +48,11 @@ section.warning{
 	font-size: 18px;
 	color: white;
 	text-align: center;
+	visibility: hidden;
 }
-section.warning p{
+section#warning p{
 	margin: 0 0 0 0;
+	visibility: hidden;
 }
 input[type=text], input[type=password] {
 	background: rgba(255, 255, 255, 0.5);
