@@ -4,9 +4,15 @@
 @font-face {
     font-family: 'NotoSans-Regular';
     src: url(../fonts/NotoSans-Regular.ttf) format('truetype');
+    
+}
+
+body{
+	
 }
 
 body,h6,p {
+	
 	font-family: NotoSans-Regular;
 }
 
@@ -17,6 +23,8 @@ body,h6,p {
 
 }
 .container{
+	
+	background-repeat:no-repeat;
 	display: block;
 	width: 1140px;
 	height: 720px;
@@ -33,9 +41,15 @@ nav{
 	height: 29px;
 	margin: 20px 25px;
 }
+nav img{
+	width: 30px;
+	height: 29px;
+	
+}
 section img {
 	display: block;
 	margin: auto;
+
 }
 
 section.input{
@@ -45,6 +59,10 @@ section.input{
 	height: 230px;
 	margin: auto;
 	margin-top: 107px;
+}
+section.input .warning_password, .warning_id{
+	display:none;
+	
 }
 
 input[type=text], input[type=password] {
@@ -57,7 +75,7 @@ input[type=text], input[type=password] {
     outline: none;*/
     /*border-radius: 5px;*/
     font-size: 18px;
-    color: white;
+    color: black;
     box-shadow: none;
 }
 input[type=text]:first-child{
@@ -72,7 +90,6 @@ input[type=submit]{
 	background-color: #00AA48;
     border: none;
     border-radius: 5px;
-    color: white;
     padding: 16px 32px;
     text-decoration: none;
     margin: auto;
@@ -80,7 +97,7 @@ input[type=submit]{
     font-size: 17px;
 }
 section.login_pg{
-	color: white;
+
 	text-align: center;
 	font-weight: normal;
 	margin-top: -5px;
