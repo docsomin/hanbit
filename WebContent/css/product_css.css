@@ -44,24 +44,29 @@ table {
   border-spacing: 0;
 }*/
 /*end of reset*/
-
+/**{
+  padding: 0px;
+}*/
 div.container{
   display: block;
   width: 1140px;
   margin: auto;
 }
 div.product_image{
-  width:60%;
+  width:55%;
   float: left;
+  text-align:center;
 }
 div.product_description{
-  width: 40%;
+  width: 45%;
   float: right;
+}
+div.sub_image ul{
+  padding: 0px;
 }
 div.sub_image ul li{
   display: inline-block;
   list-style-type: none;
-  padding-right: 13px;
 }
 .product_description .title h3{
   font-size: 40px;
