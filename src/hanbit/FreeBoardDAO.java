@@ -53,30 +53,22 @@ public class FreeBoardDAO {
 		ArrayList<FreeBoardVO> alist = new ArrayList<FreeBoardVO>();
 		
 		try {
-			sql = "SELECT NUM, USERNAME, TITLE, TIME, HIT, INDENT from board1 order by ref desc, step asc";
+			
+			sql = "SELECT id,writer,pass,write_date,title,content,hit,good from board1 order by id desc";
 			pstmt = con.prepareStatement(sql);
 			rs = pstmt.executeQuery();
 			
 			while(rs.next()) {
 				FreeBoardVO vo = new FreeBoardVO();
-				boolean dayNew = false;
-				vo.setNum(rs.getInt(1));
-				vo.setName(rs.getString(2));
-				vo.setTitle(rs.getString(3));
-				
-				Date date = new Date();
-				SimpleDateFormat simpleDate = new SimpleDateFormat("yyyy-MM-dd"); 
-				String year = (String)simpleDate.format(date);
-				String yea = rs.getString(4).substring(0,10);
-				
-				if(year.equals(yea)){
-					dayNew = true;
-				}
-				
-				vo.setTime(yea);
-				vo.setHit(rs.getInt(5));
-				vo.setIndent(rs.getInt(6));
-				vo.setDayNew(dayNew);
+				vo.setId(rs.getInt(1));
+				vo.setWriter(rs.getString(2));
+				vo.setPass(rs.getString(3));
+				String year = rs.getString(4).substring(0,10);
+				vo.setWrite_date(year);
+				vo.setTitle(rs.getString(5));
+				vo.setContent(rs.getString(6));
+				vo.setHit(rs.getInt(7));
+				vo.setGood(rs.getInt(8));
 				alist.add(vo);
 			}
 			
@@ -111,19 +103,26 @@ public class FreeBoardDAO {
 		return max;
 	}
 	
-	public void insertWrite(FreeBoardVO vo, int max) {
+	public void insertWrite(FreeBoardVO vo) {
 		Connection con = dbconnect.getConnection();
 		PreparedStatement pstmt = null;
 		
 		try {
-			sql = "INSERT INTO board1(USERNAME,PASSWORD,TITLE,MEMO,REF) VALUES(?,?,?,?,?)";
+			sql = "INSERT INTO board1(id,writer,pass,write_date,title,content,hit,good) "
+					+ "VALUES(DEFAULT,?,?,?,?,?,?,?)";
 			pstmt = con.prepareStatement(sql);
 			
-			pstmt.setString(1, pasing(vo.getName()));
-			pstmt.setString(2, pasing(vo.getPassword()));
-			pstmt.setString(3, pasing(vo.getTitle()));
-			pstmt.setString(4, pasing(vo.getMemo()));
-			pstmt.setInt(5, max+1);
+			pstmt.setString(1, pasing(vo.getWriter()));
+			pstmt.setString(2, pasing(vo.getPass()));
+			pstmt.setString(3, pasing(vo.getWrite_date()));
+			// check time function
+//			Date date = new Date();
+//			SimpleDateFormat simpleDate = new SimpleDateFormat("yyyy-MM-dd"); 
+//			String year = (String)simpleDate.format(date);
+			pstmt.setString(4, pasing(vo.getTitle()));
+			pstmt.setString(5, pasing(vo.getContent()));			
+			pstmt.setInt(6, vo.getHit());
+			pstmt.setInt(7, vo.getGood());
 			
 			pstmt.execute();
 		}catch(Exception e) {
@@ -140,22 +139,21 @@ public class FreeBoardDAO {
 		FreeBoardVO vo = null;
 		
 		try {
-			sql = "SELECT USERNAME, TITLE, MEMO, TIME, HIT, PASSWORD, REF, INDENT, STEP FROM board1 WHERE NUM=?";
+			sql = "SELECT id,writer,pass,write_date,title,content,hit,good FROM board1 WHERE NUM=?";
 			pstmt = con.prepareStatement(sql);
 			pstmt.setInt(1, idx);
 			rs = pstmt.executeQuery();
 			
 			if(rs.next()) {
 				vo = new FreeBoardVO();
-				vo.setName(rs.getString(1));
-				vo.setTitle(rs.getString(2));
-				vo.setMemo(rs.getString(3));
-				vo.setTime(rs.getString(4));
-				vo.setHit(rs.getInt(5)+1);
-				vo.setPassword(rs.getString(6));
-				vo.setRef(rs.getInt(7));
-				vo.setIndent(rs.getInt(8));
-				vo.setStep(rs.getInt(9));
+				vo.setId(rs.getInt(1));
+				vo.setWriter(rs.getString(2));
+				vo.setPass(rs.getString(3));
+				vo.setWrite_date(rs.getString(4));
+				vo.setTitle(rs.getString(5));
+				vo.setContent(rs.getString(6));
+				vo.setHit(rs.getInt(7));
+				vo.setGood(rs.getInt(8));
 			}
 			
 		}catch(Exception e) {
@@ -190,10 +188,10 @@ public class FreeBoardDAO {
 		boolean ch = false;
 		
 		try {
-			sql = "SELECT NUM FROM board1 where NUM=? and PASSWORD=?";
+			sql = "SELECT id FROM board1 where id=? and pass=?";
 			pstmt = con.prepareStatement(sql);
 			pstmt.setInt(1, idx);
-			pstmt.setString(2, vo.getPassword());
+			pstmt.setString(2, vo.getPass());
 			rs = pstmt.executeQuery();
 			
 			if(rs.next()) {
@@ -215,7 +213,7 @@ public class FreeBoardDAO {
 		PreparedStatement pstmt = null;
 		
 		try {
-			sql = "DELETE FROM board1 WHERE NUM=?";
+			sql = "DELETE FROM board1 WHERE id=?";
 			pstmt = con.prepareStatement(sql);
 			pstmt.setInt(1, idx);
 			pstmt.executeUpdate();
@@ -232,10 +230,10 @@ public class FreeBoardDAO {
 		PreparedStatement pstmt = null;
 		
 		try {
-			sql = "UPDATE board1 SET TITLE=?, MEMO=? where NUM=?";
+			sql = "UPDATE board1 SET title=?, content=? where id=?";
 			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, pasing(vo.getTitle()));
-			pstmt.setString(2, pasing(vo.getMemo()));
+			pstmt.setString(2, pasing(vo.getContent()));
 			pstmt.setInt(3, idx);
 			pstmt.executeUpdate();
 			
@@ -246,7 +244,7 @@ public class FreeBoardDAO {
 		}
 	}
 	
-	public void UpdateStep(int ref, int step) {
+/*	public void UpdateStep(int ref, int step) {
 		Connection con = dbconnect.getConnection();
 		PreparedStatement pstmt = null;
 		
@@ -287,5 +285,5 @@ public class FreeBoardDAO {
 		}finally {
 			DBClose.close(con,pstmt);
 		}
-	}
+	} */
 }

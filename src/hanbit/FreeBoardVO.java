@@ -1,37 +1,45 @@
 package hanbit;
 
 public class FreeBoardVO {
-	private int num;
-	private String name;
-	private String password;
+	private int id;
+	private String writer;
+	private String pass;
+	private String write_date;
 	private String title;
-	private String memo;
-	private String time;
+	private String content;
 	private int hit;
-	private int ref;
-	private int indent;
-	public int getNum() {
-		return num;
+	private int good;
+
+	public int getId() {
+		return id;
 	}
 
-	public void setNum(int num) {
-		this.num = num;
+	public void setId(int id) {
+		this.id = id;
 	}
 
-	public String getName() {
-		return name;
+	public String getWriter() {
+		return writer;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setWriter(String writer) {
+		this.writer = writer;
 	}
 
-	public String getPassword() {
-		return password;
+	public String getPass() {
+		return pass;
 	}
 
-	public void setPassword(String password) {
-		this.password = password;
+	public void setPass(String pass) {
+		this.pass = pass;
+	}
+
+	public String getWrite_date() {
+		return write_date;
+	}
+
+	public void setWrite_date(String write_date) {
+		this.write_date = write_date;
 	}
 
 	public String getTitle() {
@@ -42,20 +50,12 @@ public class FreeBoardVO {
 		this.title = title;
 	}
 
-	public String getMemo() {
-		return memo;
+	public String getContent() {
+		return content;
 	}
 
-	public void setMemo(String memo) {
-		this.memo = memo;
-	}
-
-	public String getTime() {
-		return time;
-	}
-
-	public void setTime(String time) {
-		this.time = time;
+	public void setContent(String content) {
+		this.content = content;
 	}
 
 	public int getHit() {
@@ -66,57 +66,26 @@ public class FreeBoardVO {
 		this.hit = hit;
 	}
 
-	public int getRef() {
-		return ref;
+	public int getGood() {
+		return good;
 	}
 
-	public void setRef(int ref) {
-		this.ref = ref;
+	public void setGood(int good) {
+		this.good = good;
+	}
+	
+	public FreeBoardVO() {		
 	}
 
-	public int getIndent() {
-		return indent;
-	}
-
-	public void setIndent(int indent) {
-		this.indent = indent;
-	}
-
-	public int getStep() {
-		return step;
-	}
-
-	public void setStep(int step) {
-		this.step = step;
-	}
-
-	public boolean isDayNew() {
-		return dayNew;
-	}
-
-	public void setDayNew(boolean dayNew) {
-		this.dayNew = dayNew;
-	}
-
-	private int step;
-	private boolean dayNew;
-
-	public FreeBoardVO() {
-
-	}
-
-	public FreeBoardVO(int num, String name, String password, String title,
-			String memo, String time, int hit, int ref, int indent, int step, boolean dayNew) {
-		this.num = num;
-		this.name = name;
-		this.password = password;
+	public FreeBoardVO(int id, String writer, String pass, String write_date,
+			String title, String content, int hit, int good) {
+		this.id = id;
+		this.writer = writer;
+		this.pass = pass;
 		this.title = title;
-		this.memo = memo;
-		this.time = time;
+		this.write_date = write_date;
+		this.content = content;
 		this.hit = hit;
-		this.ref = ref;
-		this.indent = indent;
-		this.step = step;
-		this.dayNew = dayNew;
+		this.good = good;
 	}
 }
