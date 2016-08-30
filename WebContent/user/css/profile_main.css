@@ -16,104 +16,104 @@
 /*.first_col .card:nth-child(1){
   border-right: 0px;
   border-bottom: 1px solid black;
-}*/
-.first_col .card:nth-child(2){
-  border-left: 0px;
-  border-right: 0px;
-}
-.first_col .card:nth-child(3){
-  border-right: 0px;
-}
+  }*/
+  .first_col .card:nth-child(2){
+    border-left: 0px;
+    border-right: 0px;
+  }
+  .first_col .card:nth-child(3){
+    border-right: 0px;
+  }
 
-.first_col .card .profile_image{
-  width: 283px;
-  height: 283px;
-  background-image: url("http://placehold.it/283x283");
-  border-bottom: 1px solid black;
-}
-.first_col .card h3, p{
-  text-align: center;
-}
-.first_col .card h3{
-  margin: 8px 0 0 0;
-  padding: 0px;
-  font-size: 24px;
-}
-.first_col .card p{
-  margin: 0px;
-  padding: 0px;
-}
-.first_col .card .button{
-  text-align: center;
-  padding-top: 5px;
-}
-.first_col .card .button button{
-  width: 70px;
-  height: 24px;
-  border-radius: 5px;
-  background-color: #5aa4fb;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
-  border: solid 1px #ffffff;
-  color: white;
-  margin: 0 15px;
-}
-.first_col .card .head{
-  height: 75px;
-  border-bottom: 1px solid black;
+  .first_col .card .profile_image{
+    width: 283px;
+    height: 283px;
+    background-image: url("http://placehold.it/283x283");
+    border-bottom: 1px solid black;
+  }
+  .first_col .card h3, p{
+    text-align: center;
+  }
+  .first_col .card h3{
+    margin: 8px 0 0 0;
+    padding: 0px;
+    font-size: 24px;
+  }
+  .first_col .card p{
+    margin: 0px;
+    padding: 0px;
+  }
+  .first_col .card .button{
+    text-align: center;
+    padding-top: 5px;
+  }
+  .first_col .card .button button{
+    width: 70px;
+    height: 24px;
+    border-radius: 5px;
+    background-color: #5aa4fb;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    border: solid 1px #ffffff;
+    color: white;
+    margin: 0 15px;
+  }
+  .first_col .card .head{
+    height: 75px;
+    border-bottom: 1px solid black;
 
-}
-.first_col .card .head ul{
-  margin: 0px;
-  padding: 0px;
-  list-style-type: none;
-  text-align: center;
-}
-.first_col .card .head ul li{
-  display: inline-block;
-  vertical-align: middle;
-  line-height: 75px;
-}
-.first_col .card .head ul{
-  font-size: 40px;
-}
-.first_col .card .head .title{
-  margin-right: 25px;
-}
-.first_col .card ul .link{
-  width: 50px;
-  height: 50px;
-  -webkit-border-radius: 25px;
-  -moz-border-radius: 25px;
-  border-radius: 25px;
-  border: 1px solid black;
-  line-height: 50px;
-  font-weight: bold;
-  line-height: 75px;
-}
-.first_col .card .profile_about{
-  padding: 15px;
-}
-.first_col .card .profile_about p{
-  text-align: left;
-  opacity: 0.8;s
-}
-.first_col .card .button2{
-  text-align: right;
+  }
+  .first_col .card .head ul{
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    text-align: center;
+  }
+  .first_col .card .head ul li{
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 75px;
+  }
+  .first_col .card .head ul{
+    font-size: 40px;
+  }
+  .first_col .card .head .title{
+    margin-right: 25px;
+  }
+  .first_col .card ul .link{
+    width: 50px;
+    height: 50px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    border: 1px solid black;
+    line-height: 50px;
+    font-weight: bold;
+    line-height: 75px;
+  }
+  .first_col .card .profile_about{
+    padding: 15px;
+  }
+  .first_col .card .profile_about p{
+    text-align: left;
+    opacity: 0.8;s
+  }
+  .first_col .card .button2{
+    text-align: right;
 
-}
-.first_col .card .button2 .btnEdit{
-  width: 70px;
-  height: 40px;
-  border: 1px solid #ffffff;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
-  background-color:  #5aa4fb;
-  color:white;
-  padding: 2px 25px;
-  margin: 20px 20px 0px 0;
-  cursor: pointer;
+  }
+  .first_col .card .button2 .btnEdit{
+    width: 70px;
+    height: 40px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    background-color:  #5aa4fb;
+    color:white;
+    padding: 2px 25px;
+    margin: 20px 20px 0px 0;
+    cursor: pointer;
 
-  /*아래는 버튼일 떄 코드입니다.*/
+    /*아래는 버튼일 떄 코드입니다.*/
   /*width: 70px;
   height: 24px;
   border-radius: 5px;
@@ -204,45 +204,135 @@
 .first_col .recent .content{
   visibility: hidden;
   float: left;
-}*/
-.recent{
-  display: inline-block;
-  width: 849px;
-  height: 293px;
-  float: left;
-  border: 1px solid black;
-  overflow: auto;
-  border-top: 0px;
-  border-left: 0px;
-}
-.recent ul{
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-.recent ul li{
-  width: 849px;
-  height: 69px;
-  border-bottom: 1px solid #999;
-}
-.recent div.image{
-  width: 69px;
-  height: 69px;
-  background-image: url("http://placehold.it/69x69");
-  border-right: 1px solid #999;
-  float: left;
-}
-.recent div.content{
-  width: 748px;
-  height: 69px;
-  float: left;
-}
-.recent div.content h4{
-  font-size: 18px;
-  margin: 10px 0 0 15px;
-}
-.recent .content p{
-  margin: 0;
-  text-align: left;
-  margin: 10px 0 0 15px;
-}
+  }*/
+  .recent{
+    display: inline-block;
+    width: 849px;
+    height: 293px;
+    float: left;
+    border: 1px solid black;
+    overflow: auto;
+    border-top: 0px;
+    border-left: 0px;
+  }
+  .recent ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  .recent ul li{
+    width: 849px;
+    height: 69px;
+    border-bottom: 1px solid #999;
+  }
+  .recent div.image{
+    width: 69px;
+    height: 69px;
+    background-image: url("http://placehold.it/69x69");
+    border-right: 1px solid #999;
+    float: left;
+  }
+  .recent div.content{
+    width: 748px;
+    height: 69px;
+    float: left;
+  }
+  .recent div.content h4{
+    font-size: 18px;
+    margin: 10px 0 0 15px;
+  }
+  .recent .content p{
+    margin: 0;
+    text-align: left;
+    margin: 10px 0 0 15px;
+  }
+
+
+
+
+
+
+  #Bmodal {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #Bmodal:hover {
+    opacity: 0.7;
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .modal-content {
+    margin: auto;
+    display: block;
+    border-radius: 10px;
+    background-color: white;
+    height: 30%;
+    width: 80%;
+    max-width: 700px;
+  }
+  
+  .modal-content p,
+  h1 {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  #p2 {
+    opacity: 0.5;
+  }
+  
+  #Tdelete {
+    margin-left: 28%;
+    border-radius: 5px;
+  }
+  
+  #Cdelete {
+    border: 0.5px;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+  }
+  
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+  
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
