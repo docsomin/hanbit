@@ -172,7 +172,8 @@
   color: black;
   font-size: 22px;
 }
-.first_col .recent{
+/*.first_col .recent{
+  display: inline-block;
   width: 850px;
   height: 293px;
   float: left;
@@ -189,6 +190,59 @@
   display: inline-block;
   width: 849px;
   height: 69px;
-  background-image: url("http://placehold.it/849x69");
-  box-shadow: 2px 2px 1px 0 rgba(0, 0, 0, 0.5);
+  background-color: green;
+  border-bottom: 1px solid #999;
+  margin: 0px;
+  padding: 0px;
+}
+.first_col .recent div.image{
+  width: 69px;
+  height: 69px;
+  background-image: url("http://placehold.it/69x69");
+  float: left;
+}
+.first_col .recent .content{
+  visibility: hidden;
+  float: left;
+}*/
+.recent{
+  display: inline-block;
+  width: 849px;
+  height: 293px;
+  float: left;
+  border: 1px solid black;
+  overflow: auto;
+  border-top: 0px;
+  border-left: 0px;
+}
+.recent ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.recent ul li{
+  width: 849px;
+  height: 69px;
+  border-bottom: 1px solid #999;
+}
+.recent div.image{
+  width: 69px;
+  height: 69px;
+  background-image: url("http://placehold.it/69x69");
+  border-right: 1px solid #999;
+  float: left;
+}
+.recent div.content{
+  width: 748px;
+  height: 69px;
+  float: left;
+}
+.recent div.content h4{
+  font-size: 18px;
+  margin: 10px 0 0 15px;
+}
+.recent .content p{
+  margin: 0;
+  text-align: left;
+  margin: 10px 0 0 15px;
 }
