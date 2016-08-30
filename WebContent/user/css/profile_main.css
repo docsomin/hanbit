@@ -1,0 +1,194 @@
+.container{
+  width: 1140px;
+  display: block;
+  margin: auto;
+}
+.first_col .card{
+  width: 24.8%;
+  height: 375px;
+  border: 1px solid black;
+  display: inline-block;
+  float: left;
+  padding: 0px;
+  margin: 0px;
+  overflow: auto;
+}
+/*.first_col .card:nth-child(1){
+  border-right: 0px;
+  border-bottom: 1px solid black;
+}*/
+.first_col .card:nth-child(2){
+  border-left: 0px;
+  border-right: 0px;
+}
+.first_col .card:nth-child(3){
+  border-right: 0px;
+}
+
+.first_col .card .profile_image{
+  width: 283px;
+  height: 283px;
+  background-image: url("http://placehold.it/283x283");
+  border-bottom: 1px solid black;
+}
+.first_col .card h3, p{
+  text-align: center;
+}
+.first_col .card h3{
+  margin: 8px 0 0 0;
+  padding: 0px;
+  font-size: 24px;
+}
+.first_col .card p{
+  margin: 0px;
+  padding: 0px;
+}
+.first_col .card .button{
+  text-align: center;
+  padding-top: 5px;
+}
+.first_col .card .button button{
+  width: 70px;
+  height: 24px;
+  border-radius: 5px;
+  background-color: #5aa4fb;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  border: solid 1px #ffffff;
+  color: white;
+  margin: 0 15px;
+}
+.first_col .card .head{
+  height: 75px;
+  border-bottom: 1px solid black;
+
+}
+.first_col .card .head ul{
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+  text-align: center;
+}
+.first_col .card .head ul li{
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 75px;
+}
+.first_col .card .head ul{
+  font-size: 40px;
+}
+.first_col .card .head .title{
+  margin-right: 25px;
+}
+.first_col .card ul .link{
+  width: 50px;
+  height: 50px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+  border: 1px solid black;
+  line-height: 50px;
+  font-weight: bold;
+  line-height: 75px;
+}
+.first_col .card .profile_about{
+  padding: 15px;
+}
+.first_col .card .profile_about p{
+  text-align: left;
+  opacity: 0.8;s
+}
+.first_col .card .button2{
+  text-align: right;
+
+}
+.first_col .card .button2 .btnEdit{
+  width: 70px;
+  height: 40px;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  background-color:  #5aa4fb;
+  color:white;
+  padding: 2px 25px;
+  margin: 20px 20px 0px 0;
+  cursor: pointer;
+
+  /*아래는 버튼일 떄 코드입니다.*/
+  /*width: 70px;
+  height: 24px;
+  border-radius: 5px;
+  background-color: #5aa4fb;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  border: solid 1px #ffffff;
+  color: white;
+  margin: 0 15px;*/
+}
+
+.first_col .card .friends_list ul{
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+.first_col .card .friends_list ul li{
+  display: inline-block;
+  /*스크롤 없을 땐 91px 까지 가능*/
+  width: 89px;
+  height: 89px;
+  background-image: url("http://placehold.it/89x89");
+  /*background-color: blue;*/
+  /*border: 0px solid red;*/
+  box-shadow: 2px 2px 1px 0 rgba(0, 0, 0, 0.5);
+
+}
+.first_col .card .chat_list ul{
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+.first_col .card .chat_list ul li{
+  display: block;
+  width: 283px;
+  height: 86px;
+  background-image: url("http://placehold.it/283x86");
+  border-bottom: 1px solid #999;
+}
+.first_col .menu{
+  float: left;
+  width: 24.8%;
+  height: 293px;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
+.first_col .menu ul{
+  list-style-type: none;
+  padding: 0 0 0 20px;
+}
+.first_col .menu ul li{
+  margin: 0 0 10px 0;
+}
+.first_col .menu ul li a{
+  text-decoration: none;
+  color: black;
+  font-size: 22px;
+}
+.first_col .recent{
+  width: 850px;
+  height: 293px;
+  float: left;
+  border: 1px solid black;
+  border-top: 0px;
+  border-left: 0px;
+}
+.first_col .recent ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.first_col .recent ul li{
+  display: inline-block;
+  width: 849px;
+  height: 69px;
+  background-image: url("http://placehold.it/849x69");
+  box-shadow: 2px 2px 1px 0 rgba(0, 0, 0, 0.5);
+}
