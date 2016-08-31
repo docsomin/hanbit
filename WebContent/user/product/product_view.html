@@ -1,68 +1,276 @@
-<!DOCTYPE html>
-<head>
-  <meta charset="UTF-8">
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-  <title>Document</title>
-  <link rel="stylesheet" href="css/product_css.css">
-</head>
+  <!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/product_css.css">
+    <script type="text/javascript" src="../js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="../js/header.js"></script>
+  </head>
+  
+  </head>
 <body>
-  <div class="container">
-    <div class="product_image">
-      <div class="main_image">
-        <img src="http://placehold.it/600x400">
-      </div>
-      <div class="sub_image">
-        <ul>
-          <li><img src="http://placehold.it/90x90" alt="main1"></li>
-          <li><img src="http://placehold.it/90x90" alt="sub1"></li>
-          <li><img src="http://placehold.it/90x90" alt="sub2"></li>
-          <li><img src="http://placehold.it/90x90" alt="sub3"></li>
-          <li><img src="http://placehold.it/90x90" alt="sub4"></li>
-        </ul>
-      </div>
-    </div>
+	<header>
+		<div class="logo">
+			<img src="../images/logo_header.png" alt="logo" >
+		</div>
+		<div class="nav-list"></div>
+		<nav>
+			<ul>
+				<li><a href="#">BIKE</a></li>
+				<li><a href="#">ACCESSORY</a></li>
+				<li><a href="#">CLOTHES</a></li>
+				<li><a href="#">BOARD</a></li>
+			</ul>
+		</nav>
+		<div class="topInfo">
+			<div class="topLogin">
+				<div class="topInfoSet">
+					<!--<sapn><a href="#">login</a></sapn><span class="top_">|</span>-->
+					<sapn class="info"><a href="#">Mypage</a></sapn><span class="top_">|</span>
+					<sapn><a href="#">logout</a></sapn><span class="top_">|</span>
+					<sapn><a href="#">cart</a></sapn>
+				</div>
+				<div class="topSearch_btn"><img src="../images/ic_search.png" alt="서치"></div>
+			</div>
+			<div class="topSearch_box">
+				<div class="topSearch_l">
+					<input type="text" placeholder="검색어를 입력하세요">
+				</div>
+				<div class="topSearch_r">
+					<a href="#"><img src="../images/ic_search.png" alt="서치" width="20" height="20"></a>
+				</div>
+				<div class="topSearch_b">인기 검색어</div>
+				<div class="topSearch_close">닫기 X</div>
+			</div>
+		</div>
+	</header>
+  
+  <body>
 
-    <div class="product_description">
-      <div class="title">
-        <h3>Item Title</h3>
-        <h5>Item Subtitle</h5>
-      </div>
-
-      <div class="product_color">
-        <p class="choose_color">CHOOSE COLOR</p>
-        <ul>
-          <li class="color1"></li>
-          <li class="color2"></li>
-          <li class="color3"></li>
-          <li class="color4"></li>
-          <li class="color5"></li>
-        </ul>
-      </div>
-
-      <div class="product_size">
-        <p class="choose_size">CHOOSE SIZE</p>
+    <div class="container">
+      <div class="product_image">
+        <div class="main_image">
+          <img src="http://placehold.it/600x400">
+        </div>
+        <div class="sub_image">
           <ul>
-            <li class="size">S</li>
-            <li class="size">M</li>
-            <li class="size">L</li>
-            <li class="size">XL</li>
+            <li><img src="http://placehold.it/90x90" alt="main1"></li>
+            <li><img src="http://placehold.it/90x90" alt="sub1"></li>
+            <li><img src="http://placehold.it/90x90" alt="sub2"></li>
+            <li><img src="http://placehold.it/90x90" alt="sub3"></li>
+            <li><img src="http://placehold.it/90x90" alt="sub4"></li>
           </ul>
+        </div>
       </div>
 
-      <div class="description">
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-          when an unknown printer took a galley of type and scrambled it to make a type
-          specimen book. </p>
-      </div>
+      <div class="product_description">
+        <div class="title">
+          <h3>Item Title</h3>
+          <h5>Item Subtitle</h5>
+        </div>
 
-      <div class="action">
-        <ul>
-          <li><input class="button" type="submit" value="장바구니"></li>
-          <li><input class="button" type="submit" value="바로 결제"></li>
-        </ul>
+        <div class="product_color">
+          <p class="choose_color">CHOOSE COLOR</p>
+          <ul>
+            <li class="color1"></li>
+            <li class="color2"></li>
+            <li class="color3"></li>
+            <li class="color4"></li>
+            <li class="color5"></li>
+          </ul>
+        </div>
+
+        <div class="product_size">
+          <p class="choose_size">CHOOSE SIZE</p>
+            <ul>
+              <li class="size">S</li>
+              <li class="size">M</li>
+              <li class="size">L</li>
+              <li class="size">XL</li>
+            </ul>
+        </div>
+
+        <div class="description">
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+            when an unknown printer took a galley of type and scrambled it to make a type
+            specimen book. </p>
+        </div>
+
+        <div class="action">
+          <ul>
+            <li><input class="button" type="submit" value="장바구니"></li>
+            <li><input class="button" type="submit" value="바로 결제"></li>
+          </ul>
+        </div>
       </div>
+      
+         <div class="item_explain">
+    
+        <figure class="img1">
+            <img src="" alt="삼품 이미지" width="400px" height="300px">
+            <figcaption>explanatory caption</figcaption>
+        </figure>
+        <figure class="img2">
+            <img src="" alt="삼품 이미지" width="400px" height="300px">
+            <figcaption>explanatory caption</figcaption>
+        </figure>
+        <figure class="img3">
+            <img src="" alt="삼품 이미지" width="400px" height="300px">
+            <figcaption>explanatory caption</figcaption>
+        </figure>
     </div>
-  </div>
-</body>
-</html>
+    </div>
+
+    <div class="notice">
+ 
+        <div class="table_item">
+        <h2>Review</h2>
+            <table id="list">
+                <tr>
+                    <th id="tabe_num">번호</th>
+                    <th id="table_title">제목</th>
+                    <th id="table_name">이름</th>
+                    <th id="table_date">날짜</th>
+                    <th id="table_chk">조회</th>
+                </tr>
+                <tr>
+                    <td class="td1">1</td>
+                    <td class="td2">게시판 만들기</td>
+                    <td class="td3">홍길동</td>
+                    <td class="td4">2016.8.31</td>
+                    <td class="td5">25</td>
+                </tr>
+                <tr>
+                    <td class="td1">2</td>
+                    <td class="td2">게시판 만들기</td>
+                    <td class="td3">홍길동</td>
+                    <td class="td4">2016.8.31</td>
+                    <td class="td5">25</td>
+                </tr>
+                <tr>
+                    <td class="td1">3</td>
+                    <td class="td2">게시판 만들기</td>
+                    <td class="td3">홍길동</td>
+                    <td class="td4">2016.8.31</td>
+                    <td class="td5">25</td>
+                </tr>
+                <tr>
+                    <td class="td1">4</td>
+                    <td class="td2">게시판 만들기</td>
+                    <td class="td3">홍길동</td>
+                    <td class="td4">2016.8.31</td>
+                    <td class="td5">25</td>
+                </tr>
+                <tr>
+                    <td class="td1">5</td>
+                    <td class="td2">게시판 만들기</td>
+                    <td class="td3">홍길동</td>
+                    <td class="td4">2016.8.31</td>
+                    <td class="td5">25</td>
+                </tr>
+                <tr>
+                    <td class="td1">6</td>
+                    <td class="td2">게시판 만들기</td>
+                    <td class="td3">홍길동</td>
+                    <td class="td4">2016.8.31</td>
+                    <td class="td5">25</td>
+                </tr>
+                <tr>
+                    <td class="td1">7</td>
+                    <td class="td2">게시판 만들기</td>
+                    <td class="td3">홍길동</td>
+                    <td class="td4">2016.8.31</td>
+                    <td class="td5">25</td>
+                </tr>
+                <tr>
+                    <td class="td1">8</td>
+                    <td class="td2">게시판 만들기</td>
+                    <td class="td3">홍길동</td>
+                    <td class="td4">2016.8.31</td>
+                    <td class="td5">25</td>
+                </tr>
+                <tr>
+                    <td class="td1">9</td>
+                    <td class="td2">게시판 만들기</td>
+                    <td class="td3">홍길동</td>
+                    <td class="td4">2016.8.31</td>
+                    <td class="td5">25</td>
+                </tr>
+                <tr>
+                    <td class="td1">10</td>
+                    <td class="td2">게시판 만들기</td>
+                    <td class="td3">홍길동</td>
+                    <td class="td4">2016.8.31</td>
+                    <td class="td5">25</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+    <ul>
+        <input type="button" class="list_write" value="후기 쓰기">
+        <input type="button" class="list_show" value="후기 더 보기">
+    </ul>
+    
+    <footer>
+	<div class="footer-top">
+		<div class="footer-section">
+			<p class="footer-title">What is Lorem Ipsum?</p>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+			<p class="sns-icon">
+				<a href="#"><img src="images/facebook.png" alt="facebook"></a>
+				<a href="#"><img src="images/google-plus.png" alt="google"></a>
+				<a href="#"><img src="images/twitter.png" alt="twitter"></a>
+				<a href="#"><img src="images/share.png" alt="share"></a>
+			</p>
+		</div>
+		<div class="footer-section">
+			<p class="footer-title">What is Lorem Ipsum?</p>
+			<div class="footer_img"><img src="http://placehold.it/70x85" alt="main1"></div>
+			<p class="footer-content">
+				Lorem Ipsum is simply dummy text of the printing
+				<p class="footer_comm"><span>0</span> Comment</p>
+			</p>
+			
+			<div class="footer_img"><img src="http://placehold.it/70x80" alt="main1"></div>
+			<p class="footer-content">
+				Lorem Ipsum is simply dummy text of the printing
+				<p class="footer_comm"><span>0</span> Comment</p>
+			</p>
+			
+			<div class="footer_img"><img src="http://placehold.it/70x80" alt="main1"></div>
+			<p class="footer-content">
+				Lorem Ipsum is simply dummy text of the printing
+				<p class="footer_comm"><span>0</span> Comment</p>
+			</p>
+			
+		</div>
+		<div class="footer-section">
+			<p class="footer-title">What is Lorem Ipsum?</p>
+			<p>
+				<table border="0" cellpadding="0" cellspacing="10">
+					<tr><td>TAG</td><td>TAG</td><td>TAG</td><td>TAG</td></tr>
+					<tr><td>TAG</td><td>TAG</td><td>TAG</td><td>TAG</td></tr>
+					<tr><td>TAG</td><td>TAG</td><td>TAG</td><td>TAG</td></tr>
+					<tr><td>TAG</td><td>TAG</td><td>TAG</td><td>TAG</td></tr>
+					<tr><td>TAG</td><td>TAG</td><td>TAG</td><td>TAG</td></tr>
+					<tr><td>TAG</td><td>TAG</td><td>TAG</td><td>TAG</td></tr>
+				</table>
+
+			</p>
+		</div>
+		<div class="footer-section">
+			<p class="footer-title">What is Lorem Ipsum?</p>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+			<p align="center"><input type="text" placeholder="Your Mail" id="footer-email"></p>
+			<p><button id="footer-sendBtn">Sign up!</button></p>
+		</div>
+	</div>
+	<div class="footer-bottom">
+		Copyright 2016 ⓒ 2조
+	</div>
+</footer>
+    
+  </body>
+  </html>
