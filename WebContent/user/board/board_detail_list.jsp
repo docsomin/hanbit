@@ -135,8 +135,7 @@
           } else {
         	  for(int i=ROWSIZE*(pg-1); i<end; i++) {
         		  FreeBoardVO vo = alist.get(i);
-        		  indent = vo.getIndent();
-        		  int idx = vo.getNum();
+        		  int idx = vo.getId();
           %>
           <tr>
             <td><%=idx %></td>
@@ -147,18 +146,18 @@
             }
             // todo: add reply img 
             %>  
-            <a href="#"><%=vo.getTitle() %></a></td>
-            <td><%=vo.getName() %></td>
-            <td><%=vo.getTime() %></td>
+            <a href="board_view.jsp?idx=<%=idx%>"><%=vo.getTitle() %></a></td>
+            <td><%=vo.getWriter() %></td>
+            <td><%=vo.getWrite_date() %></td>
 <!--             change Hit to recommend -->
             <td><%=vo.getHit()  %></td>  
-            <td><%=vo.getHit() %></td>
+            <td><%=vo.getGood() %></td>
         	<%
         	// todo: add new img        	
-        	}
-        	  
+        	} 
           }
           %>
+          </tr>
           <!--
           <tr>
             <td>110011</td>
@@ -250,7 +249,7 @@
           </tr>
           -->
         </table>
-        <table width="100%" cellpadding="0" cellspacing="0" border="1">
+        <table width="100%" cellpadding="0" cellspacing="0" >
         <tr><td colspan="4" height="5"></td></tr>
         <tr>
         </tr>
@@ -285,7 +284,7 @@
 		%>
 		</td>          
         </tr>
-        <tr><td><input type=button value="글쓰기" OnClick="window.location='#'"></td></tr>
+        <tr><td class="w3-center"><br><button class="w3-btn w3-dark-grey" OnClick="window.location='#'">글쓰기</button></td></tr>
         </table>
       </div>
 	</div>

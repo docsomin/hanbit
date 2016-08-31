@@ -1,8 +1,25 @@
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="UTF-8"%>
+<%@ page import="java.sql.*,java.text.SimpleDateFormat" %>
+<%@ page import="hanbit.*" %>
+<%@ page import="java.util.*" %>
+
+<jsp:useBean id="dao" class="hanbit.FreeBoardDAO"/>
+
+<%	
+	//int idx = Integer.parseInt(request.getParameter("idx"));
+	int idx = 1;
+	
+	dao.UpdateHit(idx);
+	FreeBoardVO vo = dao.getView(idx);
+    
+%>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta charset="UTF-8">
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
@@ -62,34 +79,31 @@
       <div class="w3-xxlarge"> > 자유게시판</div>
       <br>
 	  <div class="w3-container" style="width: 90%;">
-	  <div class="w3-border-bottom w3-xlarge">"그누보드"하면 어떤것이 바로떠오르시나요?</div>
-	  <div class="w3-right w3-text-dark-grey">작성자 Sysdate 조회51 추천12</div>
+	  <div class="w3-border-bottom w3-xlarge"><%=vo.getTitle() %></div>
+	  <div class="w3-right w3-text-dark-grey">작성자 <%=vo.getWriter() %> 
+	  조회<%=vo.getHit()%> 추천<%=vo.getGood()%></div>
 	  <br>
 	  <br>
 	  <div class="w3-padding-medium w3-light-grey">
-	    "그누보드"하면 어떤것이 바로떠오르시나요?
-	    "그누보드"하면 어떤것이 바로떠오르시나요?
-	    "그누보드"하면 어떤것이 바로떠오르시나요?
-	    "그누보드"하면 어떤것이 바로떠오르시나요?
-	    "그누보드"하면 어떤것이 바로떠오르시나요?
+	    <%=vo.getContent() %>
 	  </div>
 	  <br>
 	  <div class="w3-center">
 	  <button class="w3-btn w3-dark-grey">추천</button>
 	  </div>
-	  <div class="w3-padding-tiny w3-center" style="width:80%">
-	    <div class="w3container w3-light-grey" style="min-height:100px;">
-	      <img class="w3-left" src="http://placehold.it/100x100"></img>
+	  <div class="w3-padding-tiny w3-content" style="width:80%">
+	    <div class="w3container w3-light-grey" style="min-height:50px;">
+	      <img class="w3-left" src="http://placehold.it/50x50"></img>
 	      <p>작성자 Sysdate</p>
 	      <p>댓글 내용</p>
 	    </div>
-	    <div class="w3container w3-light-grey" style="min-height:100px;">
-	      <img class="w3-left" src="http://placehold.it/100x100"></img>
+	    <div class="w3container w3-light-grey" style="min-height:50px;">
+	      <img class="w3-left" src="http://placehold.it/50x50"></img>
 	      <p>작성자 Sysdate</p>
 	      <p>댓글 내용</p>
 	    </div>
-	    <div class="w3container w3-light-grey" style="min-height:100px;">
-	      <img class="w3-left" src="http://placehold.it/100x100"></img>
+	    <div class="w3container w3-light-grey" style="min-height:50px;">
+	      <img class="w3-left" src="http://placehold.it/50x50"></img>
 	      <p>작성자 Sysdate</p>
 	      <p>댓글 내용</p>
 	    </div>

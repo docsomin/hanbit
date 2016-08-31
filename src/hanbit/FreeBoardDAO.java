@@ -139,7 +139,7 @@ public class FreeBoardDAO {
 		FreeBoardVO vo = null;
 		
 		try {
-			sql = "SELECT id,writer,pass,write_date,title,content,hit,good FROM board1 WHERE NUM=?";
+			sql = "SELECT id,writer,pass,write_date,title,content,hit,good FROM board1 WHERE id=?";
 			pstmt = con.prepareStatement(sql);
 			pstmt.setInt(1, idx);
 			rs = pstmt.executeQuery();
@@ -169,7 +169,24 @@ public class FreeBoardDAO {
 		PreparedStatement pstmt = null;
 		
 		try {
-			sql = "UPDATE board1 SET HIT=HIT+1 where NUM=?";
+			sql = "UPDATE board1 SET hit=hit+1 where id=?";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1, idx);
+			pstmt.executeUpdate();
+			
+		}catch(Exception e) {
+			
+		}finally {
+			DBClose.close(con,pstmt);
+		}
+	}
+	
+	public void UpdateGood(int idx) {
+		Connection con = dbconnect.getConnection();
+		PreparedStatement pstmt = null;
+		
+		try {
+			sql = "UPDATE board1 SET good=good+1 where id=?";
 			pstmt = con.prepareStatement(sql);
 			pstmt.setInt(1, idx);
 			pstmt.executeUpdate();
