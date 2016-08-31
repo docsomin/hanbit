@@ -1,0 +1,121 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="../js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css"
+    rel="stylesheet" type="text/css">
+    <link href="..\css\cart.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript">
+      $(document).ready(function(){
+          totCalc();
+          //amount change
+          $(".intNumber").blur(function(){
+              var n = $(".intNumber").index(this);
+              var price =parseInt(uncomma($(".pPrice:eq("+n+")").text()));
+              var amount = parseInt($(this).val());
+              $(".tPrice:eq("+n+")").html(comma(price*amount));
+              totCalc();
+          });
+          //total Price
+          function totCalc(){
+            result = 0;
+            num = $(".intNumber").length;
+            for(i=0; i<num; i++){
+                result = result + parseInt(uncomma($(".tPrice:eq("+i+")").text()));
+            }
+            $(".totalprice").text(comma(result));
+          }
+          function comma(str) {
+              str = String(str);
+              return str.replace(/(\d)(?=(?:\d{3})+(?!\d))/g, '$1,');
+          }
+          function uncomma(str) {
+              str = String(str);
+              return str.replace(/[^\d]+/g, '');
+          }
+      });
+    </script>
+  </head>
+  <body>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="page-header">
+              <h2>장바구니</h2>
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <ul class="media-list">
+              <li class="media">
+                <a class="pull-left pImg" href="#"><img class="media-object" src="http://pingendo.github.io/pingendo-bootstrap/assets/placeholder.png" height="64" width="64"></a>
+                <div class="media-body">
+                  <div class="col-md-9">
+                    <h4 class="media-heading pTitle">Item name</h4>
+                    <p class="pSetup">category | color | size</p>
+                  </div>
+                  <div class="col-md-1 text-right pPrice">33,000</div>
+                  <div class="col-md-1">
+                    <p class="pAmount text-right">
+                      <input class="intNumber" type="number" min="1" max="20" value="3">
+                    </p>
+                  </div>
+                  <div class="col-md-1 text-right tPrice">99000</div>
+                </div>
+              </li>
+              <li class="media">
+                <a class="pull-left pImg" href="#"><img class="media-object" src="http://pingendo.github.io/pingendo-bootstrap/assets/placeholder.png" height="64" width="64"></a>
+                <div class="media-body">
+                  <div class="col-md-9">
+                    <h4 class="media-heading pTitle">Item name</h4>
+                    <p class="pSetup">category | color | size</p>
+                  </div>
+                  <div class="col-md-1 text-right pPrice">33000</div>
+                  <div class="col-md-1">
+                    <p class="pAmount text-right">
+                      <input class="intNumber" type="number" min="1" max="20" value="3">
+                    </p>
+                  </div>
+                  <div class="col-md-1 text-right tPrice">99000</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <p>총 결제 금액</p>
+            <p><sapn class="won">₩</sapn><span id="totalPrice" class="totalprice">99,000</span><sapn>원</sapn></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4"></div>
+          <div class="col-md-2 btnSet">
+            <p><button class="backBtn">돌아가기</button></p>
+          </div>
+          <div class="col-md-2 btnSet">
+            <p><button class="payBtn" onclick="location.href='pay.html'">결제하기</button></p>
+          </div>
+          <div class="col-md-4"></div>
+        </div>    
+      </div>
+    </div>
+  </body>
+</html>

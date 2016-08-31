@@ -1,0 +1,206 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css"
+    rel="stylesheet" type="text/css">
+    <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css"
+    rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../css/pay.css">
+    <script type="text/javascript" src="../js/jquery-3.1.0.min.js"></script>
+    <script>
+      $("document").ready(function(){
+        $("#deliveryInfo").change(function(){
+            if($("#deliveryInfo").is(":checked")){
+              $("#dname").val($("#name").val());
+              $("#demail").val($("#email").val());
+              $("#dphone").val($("#phone").val());
+              $("#daddress1").val($("#address1").val());
+              $("#daddress2").val($("#address2").val());
+            }
+            else $("#dname,#demail,#dphone,#daddress1,#daddress2").val("");
+        });
+
+        $(".card").click(function(){
+            $(this).css("background-color","#D8D8D8");
+            $(".cash").css("background-color","#fff");
+            $("#payment").val("N")
+        });
+        $(".cash").click(function(){
+            $(this).css("background-color","#D8D8D8");
+            $(".card").css("background-color","#fff");
+            $("#payment").val("Y")
+        });
+      });
+    </script>
+  </head>
+  
+  <body>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2>결제</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <h3>구매상품</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <ul class="media-list">
+              <li class="media">
+                <a class="pull-left pImg" href="#"><img class="media-object" src="http://pingendo.github.io/pingendo-bootstrap/assets/placeholder.png" height="64" width="64"></a>
+                <div class="media-body">
+                  <div class="col-md-10">
+                    <h4 class="media-heading pTitle">Item name</h4>
+                    <p class="pSetup">category | color | size</p>
+                  </div>
+                  <div class="col-md-1">
+                    <p class="pAmount text-right">
+                      3
+                    </p>
+                  </div>
+                  <div class="col-md-1 text-right tPrice">₩3,3000</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <form action="#" method="get">
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h3>주문정보</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <p>주문자</p>
+            <p>
+              <input type="text" placeholder="주문자를 입력해주세요" name="name" id="name" value="test">
+            </p>
+          </div>
+          <div class="col-md-4">
+            <p>이메일</p>
+            <p>
+              <input type="text" placeholder="이메일을 입력해주세요" name="email" id="email" value="email">
+            </p>
+          </div>
+          <div class="col-md-4">
+            <p>전화번호</p>
+            <p>
+              <input type="text" placeholder="전화번호를 입력해주세요" name="phone" id="phone" value="phone">
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <p>주소</p>
+            <p>
+              <input type="text" placeholder="주소를 입력해주세요" name="address1" id="address1" value="add1">
+            </p>
+            <p>
+              <input type="text" placeholder="상세 주소를 입력해주세요" name="address2" id="address2" value="add2">
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h3>배송 정보</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <p>
+              <input type="checkbox" id="deliveryInfo">주문자와 배송정보가 일치합니다.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <p>주문자</p>
+            <p>
+              <input type="text" placeholder="주문자를 입력해주세요" name="dname" id="dname">
+            </p>
+          </div>
+          <div class="col-md-4">
+            <p>이메일</p>
+            <p>
+              <input type="text" placeholder="이메일을 입력해주세요" name="demail" id="demail">
+            </p>
+          </div>
+          <div class="col-md-4">
+            <p>전화번호</p>
+            <p>
+              <input type="text" placeholder="전화번호를 입력해주세요" name="dphone" id="dphone">
+            </p>
+          </div>
+        </div>
+         <div class="row">
+          <div class="col-md-12">
+            <p>주소</p>
+            <p>
+              <input type="text" placeholder="주소를 입력해주세요" name="daddress1" id="daddress1">
+            </p>
+            <p>
+              <input type="text" placeholder="상세 주소를 입력해주세요" name="daddress2" id="daddress2">
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h3>결제 방법</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3"></div>
+          <div class="col-md-3">
+            <div class="payMethod card">
+              <img src="../images/card.png" alt="카드">
+              <p>신용카드</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="payMethod cash" >
+              <img src="../images/money.png" alt="계좌이체">
+              <p>무통장입금</p>
+              <input type="hidden" value="Y" name="payment" id="payment">
+            </div>
+          </div>
+          <div class="col-md-3"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4"></div>
+          <div class="col-md-2 btnSet">
+            <p><button class="backBtn" onclick="history.back()">돌아가기</button></p>
+          </div>
+          <div class="col-md-2 btnSet">
+            <p><button class="payBtn">결제하기</button></p>
+          </div>
+          <div class="col-md-4"></div>
+        </div>    
+      </div>
+    </div>
+    </form>
+    </body>
+</html>
