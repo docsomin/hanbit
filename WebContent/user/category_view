@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <link rel="stylesheet" href="category_view.css">
+    <script type="text/javascript" src="../3.Jquery/js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="../3.Jquery/js/header.js"></script>
+    <script type="text/javascript" src="../3.Jquery/js/jquery.bxslider.min.js"></script>
+    <script type="text/javascript" src="../3.Jquery/js/main.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="../img/logo_header.png" alt="logo">
+        </div>
+        <div class="nav-list"></div>
+        <nav>
+            <ul>
+                <li><a href="#">BIKE</a></li>
+                <li><a href="#">ACCESSORY</a></li>
+                <li><a href="#">CLOTHES</a></li>
+                <li><a href="#">BOARD</a></li>
+            </ul>
+        </nav>
+        <div class="topInfo">
+            <div class="topLogin">
+                <div class="topInfoSet">
+                    <!--<sapn><a href="#">login</a></sapn><span class="top_">|</span>-->
+                    <sapn class="info"><a href="#">Mypage</a></sapn><span class="top_">|</span>
+                    <sapn><a href="#">logout</a></sapn><span class="top_">|</span>
+                    <sapn><a href="#">cart</a></sapn>
+                </div>
+                <div class="topSearch_btn"><img src="../img/ic_search.png" alt="서치"></div>
+            </div>
+            <div class="topSearch_box">
+                <div class="topSearch_l">
+                    <input type="text" placeholder="검색어를 입력하세요">
+                </div>
+                <div class="topSearch_r">
+                    <a href="#"><img src="../img/ic_search.png" alt="서치" width="20" height="20"></a>
+                </div>
+                <div class="topSearch_b">인기 검색어</div>
+                <div class="topSearch_close">닫기 X</div>
+            </div>
+        </div>
+    </header>
+    <div class="top_modal"></div>
+    <div class="category_name">
+        <img src="1111_1.jpg" alt="카테고리 이미지">
+    </div>
+    <div class="container_1">
+        <div class="prod_hr_1">
+            <span>PRODUCTS</span>
+        </div>
+        <div class="prod_list_1">
+            <div class="card1">
+                <img src="images/340400.png">
+                <h3>PRODUCT</h3>
+                <p>An overhead view psd magazine mockup</p>
+                <p class="price">39,900</p>
+            </div>
+            <div class="card1">
+                <img src="images/340400.png">
+                <h3>PRODUCT</h3>
+                <p>An overhead view psd magazine mockup</p>
+                <p class="price">39,900</p>
+            </div>
+            <div class="card1">
+                <img src="images/340400.png">
+                <h3>PRODUCT</h3>
+                <p>An overhead view psd magazine mockup</p>
+                <p class="price">39,900</p>
+            </div>
+            <div class="card1">
+                <img src="images/340400.png">
+                <h3>PRODUCT</h3>
+                <p>An overhead view psd magazine mockup</p>
+                <p class="price">39,900</p>
+            </div>
+            <div class="card1">
+                <img src="images/340400.png">
+                <h3>PRODUCT</h3>
+                <p>An overhead view psd magazine mockup</p>
+                <p class="price">39,900</p>
+            </div>
+            <div class="card1">
+                <img src="images/340400.png">
+                <h3>PRODUCT</h3>
+                <p>An overhead view psd magazine mockup</p>
+                <p class="price">39,900</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-top">
+            <div class="footer-section">
+                <p class="footer-title">What is Lorem Ipsum?</p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <p class="sns-icon">
+                    <a href="#"><img src="../images/facebook.png" alt="facebook"></a>
+                    <a href="#"><img src="../images/google-plus.png" alt="google"></a>
+                    <a href="#"><img src="../images/twitter.png" alt="twitter"></a>
+                    <a href="#"><img src="../images/share.png" alt="share"></a>
+                </p>
+            </div>
+            <div class="footer-section">
+                <p class="footer-title">What is Lorem Ipsum?</p>
+                <div class="footer_img"><img src="http://placehold.it/70x85" alt="main1"></div>
+                <p class="footer-content">
+                    Lorem Ipsum is simply dummy text of the printing
+                    <p class="footer_comm"><span>0</span> Comment</p>
+                </p>
+                <div class="footer_img"><img src="http://placehold.it/70x80" alt="main1"></div>
+                <p class="footer-content">
+                    Lorem Ipsum is simply dummy text of the printing
+                    <p class="footer_comm"><span>0</span> Comment</p>
+                </p>
+                <div class="footer_img"><img src="http://placehold.it/70x80" alt="main1"></div>
+                <p class="footer-content">
+                    Lorem Ipsum is simply dummy text of the printing
+                    <p class="footer_comm"><span>0</span> Comment</p>
+                </p>
+            </div>
+            <div class="footer-section">
+                <p class="footer-title">What is Lorem Ipsum?</p>
+                <p>
+                    <table border="0" cellpadding="0" cellspacing="10">
+                        <tr>
+                            <td>TAG</td>
+                            <td>TAG</td>
+                            <td>TAG</td>
+                            <td>TAG</td>
+                        </tr>
+                        <tr>
+                            <td>TAG</td>
+                            <td>TAG</td>
+                            <td>TAG</td>
+                            <td>TAG</td>
+                        </tr>
+                        <tr>
+                            <td>TAG</td>
+                            <td>TAG</td>
+                            <td>TAG</td>
+                            <td>TAG</td>
+                        </tr>
+                        <tr>
+                            <td>TAG</td>
+                            <td>TAG</td>
+                            <td>TAG</td>
+                            <td>TAG</td>
+                        </tr>
+                        <tr>
+                            <td>TAG</td>
+                            <td>TAG</td>
+                            <td>TAG</td>
+                            <td>TAG</td>
+                        </tr>
+                        <tr>
+                            <td>TAG</td>
+                            <td>TAG</td>
+                            <td>TAG</td>
+                            <td>TAG</td>
+                        </tr>
+                    </table>
+                </p>
+            </div>
+            <div class="footer-section">
+                <p class="footer-title">What is Lorem Ipsum?</p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                <p align="center">
+                    <input type="text" placeholder="Your Mail" id="footer-email">
+                </p>
+                <p>
+                    <button id="footer-sendBtn">Sign up!</button>
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            Copyright 2016 ⓒ 2조
+        </div>
+    </footer>
+</body>
+
+</html>
