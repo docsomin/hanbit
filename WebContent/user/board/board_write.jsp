@@ -1,25 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="UTF-8"%>
-<%@ page import="java.sql.*,java.text.SimpleDateFormat" %>
-<%@ page import="hanbit.*" %>
-<%@ page import="java.util.*" %>
-
-<jsp:useBean id="dao" class="hanbit.FreeBoardDAO"/>
-
-<%	
-	int idx = Integer.parseInt(request.getParameter("idx"));
-	
-	dao.UpdateHit(idx);
-	FreeBoardVO vo = dao.getView(idx);
-    
-%>
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<meta charset="UTF-8">
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+
+  $("document").ready(function(){
+	 $("#btnWrite").click(function(){
+		 // 빈칸 체크
+		 
+	 }); 
+  });
+</script>
 </head>
 <body>
 	<header class="w3-container w3-grey w3-center">
@@ -74,42 +69,40 @@
 	  </div>
 	  <br>
     </div>
+
     <div class="w3-col s8">
-      <div class="w3-xxlarge"> > 자유게시판</div>
-      <br>
-	  <div class="w3-container" style="width: 90%;">
-	  <div class="w3-border-bottom w3-xlarge"><%=vo.getTitle() %></div>
-	  <div class="w3-right w3-text-dark-grey">작성자 <%=vo.getWriter() %> 
-	  조회<%=vo.getHit()%> 추천<%=vo.getGood()%></div>
-	  <br>
-	  <br>
-	  <div class="w3-padding-medium w3-light-grey">
-	    <%=vo.getContent() %>
-	  </div>
-	  <br>
-	  <div class="w3-center">
-	  <button class="w3-btn w3-dark-grey">추천</button>
-	  </div>
-	  <div class="w3-padding-tiny w3-content" style="width:80%">
-	    <div class="w3container w3-light-grey" style="min-height:50px;">
-	      <img class="w3-left" src="http://placehold.it/50x50"></img>
-	      <p>작성자 Sysdate</p>
-	      <p>댓글 내용</p>
-	    </div>
-	    <div class="w3container w3-light-grey" style="min-height:50px;">
-	      <img class="w3-left" src="http://placehold.it/50x50"></img>
-	      <p>작성자 Sysdate</p>
-	      <p>댓글 내용</p>
-	    </div>
-	    <div class="w3container w3-light-grey" style="min-height:50px;">
-	      <img class="w3-left" src="http://placehold.it/50x50"></img>
-	      <p>작성자 Sysdate</p>
-	      <p>댓글 내용</p>
-	    </div>
-	  </div>
-	  </div>
+      <br>  
+      <h3>> 새 글 쓰기</h3>
+      <br>     
+      <div class="w3-container" style="width:100%;">
+      <form name="WriteForm" action="write_ok.jsp" method="post">
+        <div class="w3-center w3-border-top w3-border-bottom w3-light-grey w3-padding-8">
+          <span style="margin-left:10px;">제목</span>
+          <input type="text" id="title" name="title" style="margin-left:10px; width:500px;"></input>
+        </div>
+        <div class="w3-center w3-light-grey w3-padding-8">
+          <textarea id="content" name="content" rows="20" cols="50">
+          </textarea>
+        </div>
+        <br>
+        <div>
+          <div class="w3-left">
+            <span >&nbsp;&nbsp;구분&nbsp;&nbsp;</span>
+			   <input type="radio"  name="board" value="free">&nbsp;자유&nbsp;&nbsp;
+               <input type="radio"  name="board" value="query">&nbsp;문의&nbsp;&nbsp;
+               <input type="radio"  name="board" value="qna">&nbsp;Q&A
+          </div>
+          <div class="w3-right">
+            <button id="BtnWrite">등록</button>
+            <button>취소</button>
+          </div>
+        </div>
+      </form>
+      </div>
 	</div>
   </div>
-  
+
+
 </body>
 </html>
+

@@ -114,11 +114,15 @@ public class FreeBoardDAO {
 			
 			pstmt.setString(1, pasing(vo.getWriter()));
 			pstmt.setString(2, pasing(vo.getPass()));
-			pstmt.setString(3, pasing(vo.getWrite_date()));
 			// check time function
 //			Date date = new Date();
 //			SimpleDateFormat simpleDate = new SimpleDateFormat("yyyy-MM-dd"); 
 //			String year = (String)simpleDate.format(date);
+			Date date = new Date();
+			SimpleDateFormat simpleDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+			String dateTime = (String)simpleDate.format(date);
+			pstmt.setString(3, pasing(dateTime));
+			
 			pstmt.setString(4, pasing(vo.getTitle()));
 			pstmt.setString(5, pasing(vo.getContent()));			
 			pstmt.setInt(6, vo.getHit());
@@ -126,7 +130,7 @@ public class FreeBoardDAO {
 			
 			pstmt.execute();
 		}catch(Exception e) {
-			
+			e.printStackTrace();			
 		}finally {
 			DBClose.close(con,pstmt);
 		}

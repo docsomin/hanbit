@@ -150,8 +150,8 @@
             <td><%=vo.getWriter() %></td>
             <td><%=vo.getWrite_date() %></td>
 <!--             change Hit to recommend -->
-            <td><%=vo.getHit()  %></td>  
-            <td><%=vo.getGood() %></td>
+            <td><%=vo.getGood() %></td>  
+            <td><%=vo.getHit() %></td>
         	<%
         	// todo: add new img        	
         	} 
