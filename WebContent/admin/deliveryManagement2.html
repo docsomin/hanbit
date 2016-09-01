@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+function openLeftMenu() {
+    document.getElementById("leftMenu").style.display = "block";
+}
+function closeLeftMenu() {
+    document.getElementById("leftMenu").style.display = "none";
+}
+$(document).ready(function(){
+		var flag=true;
+		$('.btn_item').click(function(){
+			//alert("item");
+			if(flag){
+				//alert("item1");
+				flag=false;
+				$('.order_item_list').hide();
+				$('.order_item_confirm_container').hide();
+				$('.btn_item').attr("src","../images/down_icon.png");
+			}else{
+				//alert("item2");
+				flag=true;
+				$('.order_item_list').show();
+				$('.order_item_confirm_container').show();
+				$('.btn_item').attr("src","../images/up_icon.png");
+			}
+		});
+		$('.btn_work').click(function(){
+			//alert("item");
+			if(flag){
+				//alert("item1");
+				flag=false;
+				$('.order_work_delete').hide();
+				$('.order_work_confirm').hide();
+				$('.btn_work').attr("src","../images/down_icon.png");
+			}else{
+				//alert("item2");
+				flag=true;
+				$('.order_work_delete').show();
+				$('.order_work_confirm').show();
+				$('.btn_work').attr("src","../images/up_icon.png");
+			}
+		});
+		
+		$('.btn_memo').click(function(){
+			//alert("item");
+			if(flag){
+				//alert("item1");
+				flag=false;
+				$('.order_memo_list').hide();
+				$('.order_memo_add').hide();
+				$('.btn_memo').attr("src","../images/down_icon.png");
+			}else{
+				//alert("item2");
+				flag=true;
+				$('.order_memo_list').show();
+				$('.order_memo_add').show();
+				$('.btn_memo').attr("src","../images/up_icon.png");
+			}
+		});
+		var from = true;
+		var to = true;
+		$('.address_from_change').click(function(){
+			//alert("from");
+			if(from){
+				$('.address_from_show').hide();
+				$('.address_from_form').show();
+				from=!from;
+			}else{
+				$('.address_from_show').show();
+				$('.address_from_form').hide();
+				from=!from;
+				
+			}
+		})
+		$('.address_to_change').click(function(){
+			//alert("to");
+			if(to){
+				$('.address_to_show').hide();
+				$('.address_to_form').show();
+				to=!to;
+			}else{
+				$('.address_to_show').show();
+				$('.address_to_form').hide();
+				to=!to;
+				
+			}
+		})
+});
+	
+</script>
+<style>
+ @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+ *{
+ line-height:30px;
+ }
+  body {font-family: 'Nanum Gothic';}
+	header ul{
+		background:gray;
+		width:100%;
+		height:50px;
+	}
+	header li{
+		display:block;
+		padding:10px;
+		float:left;
+		font-size:20px;
+		font-family:"NotoSans-Regular";
+		font-weight:bold;
+	}
+	input.date{
+		width:150px;
+	}
+	input.time_h, input.time_m{
+		width:50px;
+	}
+	
+	
+	
+	div.container{
+	width:auto;
+		background:white;
+		border:1px solid gray;
+		margin:10px;
+	}
+	div.container div{
+		margin: 0px auto;
+	}
+	div.container select{
+		width:100%;
+	}
+	
+	
+	div.address, .client, .order_date, .order_status{
+		width:90%;
+	}
+	div.address div.address_from_container,div.address div.address_to_container{
+		display:inline-block;
+		margin: 20px 10px;
+		width:45%;
+		position:relative;
+	}
+	div.address div.address_from_container div, div.address div.address_to_container div{
+		position:relative;
+	}
+	div.address_from_form, div.address_to_form{
+		float:left;
+		width:300px;
+		height:100px;
+	}
+	
+	
+	
+	
+	
+	
+
+	div.order_item_container{
+		position:relative;
+		border-bottom:1px solid gray;
+		height:40px;
+		margin:0px;
+	}
+	div.order_item{
+		width:90%;
+		margin:0px auto;
+	}
+	div.order_item label{
+		float:left;
+	}
+	div.order_item img{
+		float:right;
+		width:30px;
+		height:30px;
+	}
+	
+	
+	
+	div.order_item_list{
+		text-align:right;
+		width:90%;
+		margin:0px auto;
+	}
+	
+	
+	div.order_item_confirm_container{
+		border-top:1px solid gray;
+		height:40px;
+		margin:0px;
+	}
+	div.order_item_confirm{
+		position:relative;
+		width:90%;
+		margin:0px auto;
+	}
+	div.order_item_confirm select{
+		float:left;
+		width:200px;
+		height:30px;
+	}
+	div.order_item_confirm a, div.order_item_confirm a .reset{
+		float:left;
+		width:30px;
+		height:30px;
+	}
+	div.order_item_confirm button{
+		float:right;
+		margin:0px 5px;
+		height:30px;
+	}
+	
+	
+	
+	div.order_item_confirm button.cal_tax, div.order_item_confirm button.cal_sum, button.orderSave{
+		background:#0085ba;
+		color:white;
+		witdh:50px;
+		height:30px;
+		border-radius:5px;
+	}
+	
+	div.section_container, div.side_container{
+		float:left;
+	}
+		
+	
+</style>
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+</head>
+
+<body>
+	<header>
+	<nav class="w3-sidenav w3-white w3-card-2 w3-animate-left" style="display:none" id="leftMenu">
+	  <a href="javascript:void(0)" onclick="closeLeftMenu()"
+	  class="w3-closenav w3-large"> 닫기 &times;</a>
+	  <a href="#">상품관리</a>
+	  <a href="#">회원관리</a>
+	  <a href="#">배송관리</a>
+	  <a href="#">게시판관리</a>
+	  <a href="#">매출/매입관리</a>
+	</nav>
+
+<ul class="w3-navbar w3-black">
+  <li><span class="w3-opennav w3-xlarge" onclick="openLeftMenu()">&#9776;</span></li>
+  <li onclick="openLeftMenu()"><a href="#">홈페이지 이름</a></li>
+  <li><a href="#">상품추가</a></li>
+  <li><a href="#">배송현황</a></li>
+  <li class="w3-right"><a href="#">홈페이지</a></li>
+  <li class="w3-right"><a href="#">홈페이지</a></li>
+  <li class="w3-right"><a href="#">로그아웃</a></li>
+</ul>
+
+	</header>
+	
+	<h1>배송관리</h1>
+	
+	<div id="main_container" style="padding:0px; background:#f1f1f1; width:80%; margin:auto;">
+		<div class="section_container" style="width:60%;height:auto; margin:0px 10px; top:0px;">
+			<div class="container" style="">
+				<div class="order_date">
+				<h3>Order # 18668 자세히 보기</h3>
+				<p>일반 상세</p>
+				
+					<p>주문 일자</p>
+					<input class="date"type="text" placeholder="2016-08-21" width="50">
+					@
+					<input class="time_h"type="text"placeholder="10">:<input class="time_m"type="text" placeholder="30">
+				</div>
+				<div class="order_status">
+					<p>주문상태</p>
+					<select>
+						<option>대기중인 지불</option>
+						<option></option>
+						<option></option>
+					</select>
+				</div>
+				<div class="client">
+					<p>고객</p>
+					<input style="width:100%;"type="text">
+				</div>
+				<div class="address">
+					<div class="address_from_container">
+					 	<div> <label>청구 상세</label> <a href="#"><img class="address_from_change" style="width:30px; height:30px;" src="../images/write_icon.png"></a></div>
+						<div class="address_from_show">
+							<p>주소:</p>
+							<p  class="address_from">청구주소를 설정되지 않았습니다.</p>
+						</div>
+						<div class="address_from_form" style=" display:none;width:300px; height:100px;">
+							주소:<input style="margin:10px;" type="text"> <input style="margin:10px;" type="button" value="submit">
+						</div>
+					</div>
+					
+					<div class="address_to_container">
+						<div><label>배송 상세</label> <a href="#"><img style="width:30px; height:30px;" class="address_to_change" src="../images/write_icon.png"></a></div>
+						<div class="address_to_show">
+						<p>주소:</p>
+						<p  class="address_to">배송주소를 설정되지 않았습니다.</p>
+						</div>
+						<div class="address_to_form" style=" display:none;width:300px; height:100px;">
+							주소:<input style="margin:10px;" type="text"><input style="margin:10px;"type="button" value="submit">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container" style="">
+				<div class="order_item_container"><div class="order_item"><label>Order아이템</label>  <a  href="#"><img class="btn_item" src="../images/up_icon.png"></a></div></div>
+					<div class="order_item_list">
+						<table style="width:100%;">
+							<tr><th><input type="checkbox"></th> <th>아이템</th> <th>비용</th> <th>수량</th> <th>총계</th></tr>
+							<tr><td><input type="checkbox"></td> <td></td> <td></td> <td></td> <td></td></tr>
+							<tr><td><input type="checkbox"></td> <td></td> <td></td> <td></td> <td></td></tr>
+							<tr> <td colspan="3">할인</td> <td colspan="2" class="">0￦</td> </tr>
+							<tr> <td colspan="3">배송</td> <td colspan="2" class="">0￦</td> </tr>
+							<tr> <td colspan="3">주문총계</td> <td colspan="2" class="">0￦</td> </tr>
+							<tr> <td colspan="3">환불됨</td> <td colspan="2" class="">0￦</td></tr>
+						</table>
+					</div>
+					<div class="order_item_confirm_container">
+						<div class="order_item_confirm">
+							<select>
+								<option>작업</option>
+							</select>
+							<a class="btn_item_reset" href="#"><img  class="reset" src="../images/reset_icon.png"></a>
+							<button class="cal_sum">총계 계산하기</button>
+							<button class="cal_tax">세금 계산하기</button>
+							<button class="add_item">라인 아이템 추가</button>
+							
+						</div>
+					</div>
+			</div>
+		</div>
+		<div class="side_container" style="width:30%; height:auto;  margin:0px 10px;padding:0px; background:white;">
+			<div style="margin:10px; border:1px solid gray">
+				<div class="order_work" style="width:100%; height:40px; padding:10px;border-bottom:1px solid gray; position:relative;"><label style="float:left; display:block; width:auto; height:30px;">Order작업</label>  <a  style="float:right; " href="#"><img class="btn_work" src="../images/up_icon.png" style="width:30px; height:30px;"></a></div>
+				<div class="order_work_confirm"style="position:relative;width:100%;height:55px;padding:10px;border-bottom:1px solid gray">
+					<select style="width:70%;float:left; ">
+						<option>작업</option>
+					</select>
+					<a href="#"><img  class="btn_work_reset" src="../images/reset_icon.png"  style="float:left;width:30px; height:30px;"></a></div>
+				<div class="order_work_delete" style="width:100%; height:40px; padding:10px;"><label style="color:red;">휴지통으로 이동하기</label> <button class="orderSave" >Order 저장하기</button></div>
+			</div>
+			<div  style="margin:10px; border:1px solid gray">
+				<div style="width:100%; padding:10px;height:40px; border-bottom:1px solid gray; position:relative;"><label style="float:left;">Order메모</label>  <a  style="float:right;"href="#" ><img class="btn_memo" src="../images/up_icon.png"  style="width:30px; height:30px;"></a></div>
+				<div class="order_memo_list" style="width:100%; height:auto; padding:10px;">메모가 아직 없습니다.</div>
+				<div class="order_memo_add" style="width:100%;padding:10px;height:auto; border-top:1px solid gray;"><p>메모 추가</p> <img src="">
+					<textarea style="width:100%; height:50px;" rows="10" cols="20"></textarea>
+					<br>
+					<select style="width:70%;">
+						<option>개인용 메모</option>
+					</select>
+					<button>추가하기</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

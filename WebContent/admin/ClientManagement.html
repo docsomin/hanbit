@@ -34,6 +34,9 @@ function closeLeftMenu() {
 		font-family:"NotoSans-Regular";
 		font-weight:bold;
 	}
+	table{
+		width:100%;
+	}
 	aside a{
 		
 	}
@@ -118,15 +121,13 @@ function closeLeftMenu() {
 			<li><a href="">가나다순</a></li>
 			<li><a href="">글 순</a></li>
 			<li><a href="">매출순</a></li>
-			
-			
 			<li class="right"><input type="button" value="세부 검색"></li>
 			<li class="right"><input type="button" value="검색"></li>
 			<li class="right"><input type="text"></li>
 		</ul>
 		<table>
 			<tr class="title">
-				<th class="checkbox"><input type="checkbox" onclick="check"></th>
+				<th class="checkbox"><input type="checkbox" onclick="check()"></th>
 				<th>사진</th>
 				<th>사용자명</th>
 				<th>이름</th>
@@ -192,18 +193,18 @@ function closeLeftMenu() {
 			<li><input type="button" value="실행"></li>
 			
 			
-			<li class="right"><img src=""></li>  <!-- << -->
-			<li class="right"><img src=""></li>  <!-- < -->
+			<li class="right"><img src="../images/"></li>  <!-- >> -->
+			<li class="right"><img src="../images/button-right.png"></li>  <!-- > -->
 			<li class="right"><p class="pageCount">1</p></li>
-			<li class="right"><img src=""></li>  <!-- > -->
-			<li class="right"><img src=""></li>  <!-- >> -->
+			<li class="right"><img src="../images/button-left.png"></li>  <!-- < -->
+			<li class="right"><img src="../images/"></li>  <!-- << -->
+			
 			<li class="right"><p class="clientCount">23 유저</p></li>
 		</ul>
 		
 		<script>
 			function check(){
-					var a = document.getElementByTag('aside tr td input');
-					
+					var a = document.getElementsByTagName('input[type=checkbox]');
 				
 			}
 		</script>

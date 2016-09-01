@@ -1,0 +1,279 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+function openLeftMenu() {
+    document.getElementById("leftMenu").style.display = "block";
+}
+function closeLeftMenu() {
+    document.getElementById("leftMenu").style.display = "none";
+}
+	
+</script>
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+<style>
+
+ @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+  body {font-family: 'Nanum Gothic';}
+	header ul{
+		background:gray;
+		
+		width:100%;
+		height:50px;
+		
+	}
+	header li{
+		display:block;
+		padding:10px;
+		float:left;
+		font-size:20px;
+		font-family:"NotoSans-Regular";
+		font-weight:bold;
+	}
+	aside a{
+		
+	}
+	aside ul{
+		width:100%;
+		
+	}
+	aside ul li{
+		display:inline-block;
+		margin:10px;
+	}
+	aside ul li:not(.right){
+		float:left;
+		
+	}
+	aside ul li.right{
+		float:right;
+	}
+	aside table{
+		border-top:1px solid black;
+		border-left:1px solid black;
+		border-right:1px solid black;
+		border-bottom:1px solid black;
+	}
+	aside tr.title{
+		border-bottom:1px solid black;
+	}
+	aside tr td{
+		text-align:center;		
+	}
+	aside tr:not(.title) {
+		background:#e6e6e6;
+	}
+	
+	aside li img{
+		width:30px;
+		height:30px;
+	}
+	aside{
+		width:80%;
+		margin:auto;
+	}
+	table{
+		width:100%;
+	}
+	
+</style>
+</head>
+<body>
+	<header>
+	<nav class="w3-sidenav w3-white w3-card-2 w3-animate-left" style="display:none" id="leftMenu">
+  <a href="javascript:void(0)" onclick="closeLeftMenu()"
+  class="w3-closenav w3-large"> 닫기 &times;</a>
+  <a href="#">상품관리</a>
+  <a href="#">회원관리</a>
+  <a href="#">배송관리</a>
+  <a href="#">게시판관리</a>
+  <a href="#">매출/매입관리</a>
+</nav>
+
+<ul class="w3-navbar w3-black">
+  <li><span class="w3-opennav w3-xlarge" onclick="openLeftMenu()">&#9776;</span></li>
+  <li onclick="openLeftMenu()"><a href="#">홈페이지 이름</a></li>
+  <li><a href="#">상품추가</a></li>
+  <li><a href="#">배송현황</a></li>
+  <li class="w3-right"><a href="#">홈페이지</a></li>
+  <li class="w3-right"><a href="#">홈페이지</a></li>
+  <li class="w3-right"><a href="#">로그아웃</a></li>
+</ul>
+
+	</header>
+	<aside>
+		<h1>배송 관리</h1>
+		
+		<ul>
+			<li><a href="">모두</a></li>
+			<li><a href="">발행순</a></li>
+			<li><a href="">가나다순</a></li>
+			<li><a href="">인기순</a></li>
+			<li><a href="">매출순</a></li>
+			
+			
+			<li class="right"><input type="button" value="세부 검색"></li>
+			<li class="right"><input type="button" value="검색"></li>
+			<li class="right"><input type="text"></li>
+		</ul>
+		<table>
+			<tr class="title">
+				<th class="checkbox"><input type="checkbox" ></th>
+				<th>구매 품목</th>
+				<th>주문번호</th>
+				<th>배송지</th>
+				<th>총계</th>
+				<th>결제여부</th>
+				<th>배송여부</th>
+				<th>구매일</th>
+			</tr>
+			<tr>
+				<td><input name="subCheck" value="1" type="checkbox"></td>
+				<td>Sepcialized Ultima Vibe 200</td>
+				<td>0000010</td>
+				<td>서울시 강남구 한빛빌딩...</td>
+				<td>670,000</td>
+				<td class="order">입금 대기</td>
+				<td class="delivery">물품준비중</td>
+				<td>2016-07-18</td>
+				
+			</tr>
+			<tr>
+				<td><input name="subCheck" value="2" type="checkbox"></td>
+				<td>Sepcialized Ultima Vibe 200</td>
+				<td>0000010</td>
+				<td>서울시 강남구 한빛빌딩...</td>
+				<td>670,000</td>
+				<td class="order">입금 대기</td>
+				<td class="delivery">물품준비중</td>
+				<td>2016-07-18</td>
+				
+			</tr>
+			<tr>
+				<td><input name="subCheck" value="3" type="checkbox"></td>
+				<td>Sepcialized Ultima Vibe 200</td>
+				<td>0000010</td>
+				<td>서울시 강남구 한빛빌딩...</td>
+				<td>670,000</td>
+				<td class="order">입금 대기</td>
+				<td class="delivery">물품준비중</td>
+				<td>2016-07-18</td>
+				
+			</tr>
+			<tr>
+				<td><input name="subCheck" value="4" type="checkbox"></td>
+				<td>Sepcialized Ultima Vibe 200</td>
+				<td>0000010</td>
+				<td>서울시 강남구 한빛빌딩...</td>
+				<td>670,000</td>
+				<td class="order">입금 대기</td>
+				<td class="delivery">물품준비중</td>
+				<td>2016-07-18</td>
+				
+			</tr>
+			
+		</table>
+		<ul>
+			<li><select name="select">
+				<option value="0">일괄작업</option>
+				<option value="1">주문취소</option>
+				<option value="2">주문 수정</option>
+				<option value="3">입금 대기</option>
+				<option value="4">물품 준비 완료</option>
+				<option value="5">배송 시작</option>
+				<option value="6">배송 완료</option>
+				
+			</select></li>
+			<li><input type="button" class="submit" value="실행"></li>
+			<li><input type="button" class="delete" value="삭제"></li>
+			
+			<li class="right"><img src=""></li>  <!-- << -->
+			<li class="right"><img src=""></li>  <!-- < -->
+			<li class="right"><p class="pageCount">1</p></li>
+			<li class="right"><img src=""></li>  <!-- > -->
+			<li class="right"><img src=""></li>  <!-- >> -->
+			<li class="right"><p class="clientCount">23 아이템</p></li>
+		</ul>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script> 
+		
+		<script>
+			$(document).ready(function(){
+					$('.title input').click(function(){    // checkbox 전체 선택 해제
+							if($('.title input').prop('checked')){
+								$('input[name="subCheck"]:checkbox').each(function(){
+									$(this).prop('checked',true);
+									$(this).addClass('checked');
+								});
+								
+							}else{
+								$('input[name="subCheck"]:checkbox').each(function(){
+									$(this).prop('checked',false);
+									$(this).removeClass('checked');
+								});
+							}
+					});
+					
+					$('input[name="subCheck"]:checkbox').click(function(){   // checkbox 한개 선택
+						$(this).toggleClass('checked');
+					});
+					
+					$('.delete').click(function(){                                // class가 checked인 값의 줄을 없애버린다.
+							$('input[class="checked"]:checkbox').each(function(){
+									$(this).parent().parent().remove();
+							});
+					});
+					
+					var value =0;	
+					$('select').change(function(){    // select의 옵션값을 미리 저장한다.
+							value = $(this).val();							
+					});
+					$('.submit').click(function(){   // checkbox checked된 곳만 값을 변경
+						if(value == 1){
+							//alert('주문취소');
+							$('input[class="checked"]:checkbox').each(function(){
+								$(this).closest("tr").contents().filter(".order").html('주문 취소');
+							});
+						}
+						if(value == 2){
+							//alert('주문 수정');
+							$('input[class="checked"]:checkbox').each(function(){
+								$(this).closest("tr").contents().filter(".order").html('주문 수정');
+							});
+						}
+						if(value == 3){
+							//alert('입금 대기');
+								$('input[class="checked"]:checkbox').each(function(){
+									$(this).closest("tr").contents().filter(".order").html('입금 대기');
+								});
+						}
+						if(value == 4){
+							//alert('물품 준비 완료');
+							$('input[class="checked"]:checkbox').each(function(){
+								$(this).closest("tr").contents().filter(".delivery").html('물품 준비 완료');
+							});
+						}
+						if(value == 5){
+							//alert('배송 시작');
+							$('input[class="checked"]:checkbox').each(function(){
+								$(this).closest("tr").contents().filter(".delivery").html('배송 시작');
+							});
+						}
+						if(value == 6){
+							//alert('배송 완료');
+							$('input[class="checked"]:checkbox').each(function(){
+								$(this).closest("tr").contents().filter(".delivery").html('배송 완료');
+							});
+						}
+					});
+			});
+		</script>
+	</aside>
+	
+</body>
+</html>
