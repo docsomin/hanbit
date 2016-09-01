@@ -1,4 +1,3 @@
-
 @CHARSET "UTF-8";
 /************* Common *************/
 
@@ -14,7 +13,7 @@ body,h6,p {
 .grad{
 	width: 100%;
 	height: 100%;
-	background: linear-gradient(to bottom, #000255, #00021F);
+  background-image: url("../images/signin_bg.jpg");
 
 }
 .container{
@@ -53,6 +52,7 @@ section.input{
 	height: 380px;
 	margin: auto;
 	margin-top: 90px;
+  opacity: 0.9;
 }
 input[type=text], input[type=password] {
     width: 90%;
@@ -67,6 +67,9 @@ input[type=text], input[type=password] {
 input[type=text]:first-child{
 	margin-top:30px;
 }
+/*input[type=text]:last-child{
+  margin-bottom: 30px;
+}*/
 input[type=text]:focus {
     border: 3px solid #6ACBFF;
 }
@@ -79,6 +82,7 @@ input[type=submit]{
     padding: 16px 32px;
     text-decoration: none;
     margin: auto;
+    margin-top: 15px;
     cursor: pointer;
     font-size: 17px;
 }
