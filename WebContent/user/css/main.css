@@ -30,23 +30,23 @@ a{
 		list-style: none;
 		padding: 0px;
 		margin: 0px;
-		
+
 	}
 	nav ul li{
 		float: left;
+		padding: 0px;
 	}
 	nav ul li a{
 		display: block;
-		padding: 12px 50px;
-		width:70px;
-		font-size: 13pt;
+		padding: 18px 40px 0px 40px;
+		/*width:70px;*/
+		font-size: 14pt;
 		background-color: #fff;
 		text-align: center;
-		
 	}
 	nav ul li a:hover{
 		background-color: #fff;
-		border-bottom: 2px solid #000;
+		border-top: 3px solid #00b1db;
 	}
 	.logo{
 		float: left;
@@ -55,14 +55,15 @@ a{
 		font-size: 30pt;
 		font-weight: bold;
 	}
-	.logo img{	
+	.logo img{
 		display: block;
 		margin-top: 10px;
-		
+
 	}
 	.topInfo{
 		display: inline-block;
 		width:230px;
+		line-height: 40px;
 	}
 	.top_{
 		margin: 0px 10px;
@@ -80,12 +81,13 @@ a{
 		font-size: 9pt;
 	}
 	.topInfoSet a:hover{
-		color: red;
+		color: #00b1db;
 	}
 	.topSearch_btn{
 		float: right;
 		width: 25px;
 		margin-top: 12px;
+		margin-left: 10px;
 		height: 25px;
 		cursor: pointer;
 	}
@@ -94,7 +96,7 @@ a{
 		height: 25px;
 
 	}
-	.topSearch_box{	
+	.topSearch_box{
 		display: none;
 		position: absolute;
 		border: 1px solid #333;
@@ -103,6 +105,7 @@ a{
 		z-index: 100;
 		margin-left: 70px;
 		padding: 5px;
+
 	}
 	.topSearch_l{
 		float: left;
@@ -178,7 +181,7 @@ a{
 	.logo img{
 		margin-top:10px;
 	}
-	/* »ó´Ü °Ë»ö ÀÌ¹ÌÁö*/
+	/* ï¿½ï¿½ï¿½ï¿½ ï¿½Ë»ï¿½ ï¿½Ì¹ï¿½ï¿½ï¿½*/
 	.topSearch_btn{
 		display: block;
 		width: 50px;
@@ -194,13 +197,13 @@ a{
 		padding: 5px;
 	}
 
-	/* login Á¤º¸´Â ¼û±ä´Ù */
+	/* login ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
 	.topInfoSet{
 		display: none;
 	}
 
-	/* ³ªÅ¸³ª´Â °Ë»ö ¹öÆ°*/
-	.topSearch_box{	
+	/* ï¿½ï¿½Å¸ï¿½ï¿½ï¿½ï¿½ ï¿½Ë»ï¿½ ï¿½ï¿½Æ°*/
+	.topSearch_box{
 		display: none;
 		padding:10px 50px 10px 0px;
 		border:1px solid #D8D8D8;
@@ -224,7 +227,7 @@ a{
 			width: 40px;
 			height: 40px;
 			float: right;
-			background-color: gray;	
+			background-color: gray;
 			right: -50px;
 			margin-left: -200px;
 			position: relative;
@@ -293,14 +296,14 @@ a{
 		overflow:hidden;
 		margin: 0px auto;
 		position:relative;
-		
+
 	}
 	div#wrap *{
 		margin:0px;
 		padding:0px;
-		
+
 	}
-	
+
 
 
 	.bx-wrapper, .bx-viewport{width:1140px; height:600px;}
@@ -518,7 +521,7 @@ span{
 		background-color: rgba(0,0,0,0.1);
 	}
 }
-/*ÅÂºí¸´¿¡¼­ ½ÇÇà*/
+/*ï¿½Âºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½*/
 @media (max-width: 1025px){
 	.footer-section{
 		width: 100%;
