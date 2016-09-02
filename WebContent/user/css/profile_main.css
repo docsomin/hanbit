@@ -2,143 +2,30 @@
   display: block;
   width: 1140px;
   height: 1000px;
-
   margin: auto;
-}
-header{
-		width: 1140px;
-		height: 50px;
-		margin: auto;
-	}
-	nav{
-		display: block;
-		float: left;
-		width: 680px;
-		margin-left: 20px
-	}
-	nav ul{
-		display: block;
-		list-style: none;
-		padding: 0px;
-		margin: 0px;
-
-	}
-	nav ul li{
-		float: left;
-	}
-	nav ul li a{
-		display: block;
-		padding: 12px 50px;
-		width:70px;
-		font-size: 13pt;
-		background-color: #fff;
-		text-align: center;
-
-	}
-	nav ul li a:hover{
-		background-color: #fff;
-		border-bottom: 2px solid #000;
-	}
-	.logo{
-		float: left;
-		width: 200px;
-		height: 50px;
-		font-size: 30pt;
-		font-weight: bold;
-	}
-	.logo img{
-		display: block;
-		margin-top: 10px;
-
-	}
-	.topInfo{
-		display: inline-block;
-		width:230px;
-	}
-	.top_{
-		margin: 0px 10px;
-		font-size: 9pt;
-	}
-	.topLogin{
-		float: right;
-	}
-	.topInfoSet{
-		margin-top: 10px;
-		margin-right: 20px;
-		float: left;
-	}
-	.topInfoSet a{
-		font-size: 9pt;
-	}
-	.topInfoSet a:hover{
-		color: red;
-	}
-	.topSearch_btn{
-		float: right;
-		width: 25px;
-		height: 25px;
-		margin-top: 5px;
-		cursor: pointer;
-	}
-	.topSearch_btn img{
-		width: 25px;
-		height: 25px;
-
-	}
-	.topSearch_box{
-		display: none;
-		position: absolute;
-		border: 1px solid #333;
-		background-color: #fff;
-		top:50px;
-		z-index: 100;
-		margin-left: 70px;
-		padding: 5px;
-	}
-	.topSearch_l{
-		float: left;
-	}
-	.topSearch_r{
-		float: left;
-		margin-left: 5px;
-	}
-	.topSearch_b{
-		padding: 5px;
-		clear: left;
-	}
-	.topSearch_box .topSearch_close{
-		clear: both;
-		border: 1px solid #333;
-		width:35px;
-		font-size: 8pt;
-		float: right;
-		cursor: pointer;
-	}
-	.top_modal{
-		display: none;
-	}
-	.nav-list{
-		display: none;
-	}
+  border: 1px solid #999;
+  border-top: none;
+  padding: 0px;
 }
 .side, .about{
   display: inline-block;
   float: left;
   border: 0px solid red;
   margin: 0px;
-  box-shadow: 1px 1px 0 0 #999;
+ 
 }
 .side{
   display: inline-block;
   float: left;
   width: 17%;
-  height: 600px;
+  height: 100%;
   margin: 0px;
   border: 0px;
-  background-color: #4a4a4a;
+  background-color: #ffffff;
+
 }
 .side .profile{
-  width: 200px;
+  width: 100%;
   height: 280px;
   border: 0px;
 }
@@ -146,26 +33,27 @@ header{
   width: 100%;
   height: 200px;
   border: 0px;
-  background-image: url("../images/pic.png")
+  background-image: url("http://placehold.it/200x200")
 }
 .side .profile .profile_description{
   width: 100%;
   height: 90px;
   border: 0px;
-  /*box-shadow: 0 1px 0 0 #999;*/
+   color: #000000;
 }
 .side .profile .profile_description h3, p{
   text-align: center;
-  color: #f4f4f4;
+  color: #000000;
 }
 .side .profile .profile_description h3{
   margin: 0;
   padding: 5px 0 0 0;
   font-size: 24px;
 }
-.side .profile .profile_description p{
+.side .profile .profile_description p.id_val{
   margin: 0px;
   padding: 0 0 5px 0;
+   color: #000000
 }
 .side .profile .action{
   text-align: center;
@@ -195,15 +83,16 @@ header{
   padding-bottom: 10px;
   width: 200px;
   text-align: center;
+  color: #000000;
 }
 .side .menu ul li a{
   text-decoration: none;
   font-size: 25px;
-  color: #f4f4f4;
+  color: #000000;
   line-height: 40px;
 }
 .side .menu ul li:hover{
-  background-color:#50E3C2;
+  /*background-color:#50E3C2;*/
 }
 
 .about{
@@ -212,7 +101,8 @@ header{
   height: 100%;
   border: 0px;
   margin: 0px;
-  background-color: #fdfdfd;
+  background-color: #f4f4f4;
+  border-left:1px solid #999;
   box-shadow: 0 0 0 0;
 }
 .about .title{
@@ -232,7 +122,7 @@ header{
 
 .about .content h2{
   display: inline-block;
-  width: 63px;
+  width: 80px;
   height: 27px;
   font-size: 18px;
   font-weight: 200;
@@ -259,25 +149,37 @@ header{
 	opacity: 0.6;
 	font-size: 16px;
   font-weight: 100px;
+  padding-top: 10px;
   padding-left: 20px;
   margin-bottom: 5px;
 	color: #000000;
   float: left;
 }
 .about .card .col_title h5:nth-child(2){
-  width: 88px;
+  width: 100px;
   height: 27px;
   float: right;
+  padding: 10px 0 0 0;
 }
 .about .card hr{
   width: 395px;
   margin: 5px 20px;
 }
+.content .card .profile_content{
+	display:block;
+	width: 400px;
+	height: 400px;
+	
+	margin: auto;
+}
 .content .card .col ul{
-  /*list-style-image: url("http://placehold.it/16x16");*/
-
+  width: 380px;
+  float: left;
   display: block;
   margin-top: 15px;
+  margin-left: 30px;
+  text-align: left;
+  
 }
 .content .card .col ul .name{
   list-style-image: url("../images/name.png");
@@ -320,11 +222,17 @@ header{
 }
 div.friend_description{
   line-height: 99px;
+  width: 279px;
+  height: 99px;
+ float: right;
+ display: inline-block;
+ border: none;
 }
 div.friend_description h3{
   margin: 0;
   padding: 0 0 0 20px;;
   float: left;
+  line-height: 100px;
 }
 
 div.friend_description span{
