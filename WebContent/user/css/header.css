@@ -196,10 +196,12 @@
 
 	/* 나타나는 검색 버튼*/
 	.topSearch_box{	
-		display: none;
+		display: block;
 		padding:10px 50px 10px 0px;
+		height: 40px;
+		margin: auto;
 		border:1px solid #D8D8D8;
-		position: relative;;
+		position: relative;
 		background-color: #fff;
 		z-index: 0;
 	}
