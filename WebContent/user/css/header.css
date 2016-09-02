@@ -1,82 +1,274 @@
-header{
-         width: 1140px;
-         height:47px;
-         margin: auto;
-      }
-      nav{
-         float: left;
-         width: 740px;
-      }
-      nav ul{
-         display: block;
-         list-style: none;
-         padding: 0px;
-         margin: 0px;
-         
-      }
-      nav ul li{
-         float: left;
-      }
-      nav ul li a{
-         display: block;
-         padding: 12px 60px;
-         background-color: #ddd;
-         
-      }
-      nav ul li a:hover{
-         background-color: #fff;
-      }
-      a{
-         text-decoration: none;
-         color: #333;
-      }
-      
-      .logo{
-         float: left;
-         width: 200px;
-         font-size: 30pt;
-         font-weight: bold;
+@font-face{
+	font-family: 'NotoSans';
+	src: url(../fonts/NotoSans-Regular.ttf) format('truetype');
+}
+*{margin:0px;padding:0px;}
+@media (min-width: 1025px){
+	header{
+		width: 1140px;
+		height: 50px;
+		margin: auto;
+	}
+	#nav{
+		display: block;
+		float: left;
+		width: 680px;
+		padding-left: 20px
+	}
+	#nav ul{
+		display: block;
+		list-style: none;
+		padding: 0px;
+		margin: 0px;
+		
+	}
+	#nav ul li{
+		float: left;
+	}
+	#nav ul li a{
+		display: block;
+		padding: 12px 5px;
+		width:150px;
+		font-size: 13pt;
+		background-color: #fff;
+		text-align: center;
+		text-decoration:none;
+		color: #333;
+		opacity:0.8	;
+		
+	}
+	#nav ul li a:hover{
+		opacity:1;
+		border-top: 2px solid #297CE2;
+	}
+	.logo{
+		float: left;
+		width: 200px;
+		height: 50px;
+		font-size: 30pt;
+		font-weight: bold;
+	}
+	.logo img{	
+		display: block;
+		margin-top: 10px;
+		
+	}
+	.topInfo{
+		display: inline-block;
+		width:230px;
+	}
+	.top_{
+		margin: 0px 10px;
+		font-size: 9pt;
+	}
+	.topLogin{
+		float: right;
+	}
+	.topInfoSet{
+		margin-top: 10px;
+		margin-right: 20px;
+		float: left;
+	}
+	.topInfoSet a{
+		font-size: 9pt;
+		text-decoration:none;
+		color: #333;
+	}
+	.topInfoSet a:hover{
+		color: #297CE2;
+	}
+	.topSearch_btn{
+		float: right;
+		width: 25px;
+		height: 25px;
+		margin-top: 5px;
+		cursor: pointer;
+	}
+	.topSearch_btn img{
+		width: 25px;
+		height: 25px;
 
-      }
-      .topSearch{
-         width:200px;
-         float: left;
-      }
-      .topInfo{
-         padding: 12px;
-         float: left;
-         
-      }
-      .topSerch_img{
-         width: 30px;
-         height: 30px;
-         margin-left:30px;
-         margin-top: 5px;
-         float:left;
-         cursor: pointer;
-      }
-      .topLogin{
-         margin-right: 10px;
-      }
-      .topCart{
-         margin-left: 10px;
-      }
-      .topSerch_box{
-         display: none;
-         position: absolute;
-         border: 1px solid #333;
-         top:60px;
-         padding: 5px;
-      }
-      .topSearch_l{
-         float: left;
-      }
-      .topSearch_r{
-         float: left;
-         margin-left: 5px;
+	}
+	.topSearch_box{	
+		display: none;
+		position: absolute;
+		border: 1px solid #999;
+		background-color: #fff;
+		top:50px;
+		z-index: 100;
+		margin-left: 70px;
+		padding: 5px;
+	}
+	.topSearch_l{
+		float: left;
+	}
+	.topSearch_r{
+		float: left;
+		margin-left: 5px;
+	}
+	.topSearch_b{
+		padding: 5px;
+		clear: left;
+	}
+	.topSearch_box .topSearch_close{
+		clear: both;
+		border: 1px solid #999;
+		width:35px;
+		font-size: 8pt;
+		float: right;
+		cursor: pointer;
+	}
+	.top_modal{
+		display: none;
+	}
+	.nav-list{
+		display: none;
+	}
+}
+@media (max-width: 1025px){
+	header{
+		position: fixed;
+		top: 0px;
+		z-index: 2;
+		width: 100%;
+		background-color: #fff;
+	}
+	#nav{
+		position: absolute;
+		width: 30%;
+		z-index: 2;
+		left:-33%;
+	}
+	#nav ul{
+		list-style: none;
+		padding:0px;
+		margin: 0px;
+		height: 1000px;
+		background-color: #fff;
+		border-right: 1px solid #999;
+		border-top: 1px solid #999;
+	}
+	#nav ul li a{
+		display: block;
+		width: 95%;
+		padding: 12px 0px 12px 5%;
+		font-size: 12pt;
+		background-color: #fff;
+		color: #297CE2;
+		text-align: left;
+		text-decoration:none;
+	}
+	#nav ul li span{
+		padding-left: 10px;
+	}
+	#nav ul li a:hover{
+		color:#fff;
+		background-color: #297CE2;
+	}
+	.logo{
+		width: 200px;
+		height: 50px;
+		margin: auto;
+	}
+	.logo img{
+		margin-top:10px;
+	}
+	/* 상단 검색 이미지*/
+	.topSearch_btn{
+		display: block;
+		width: 50px;
+		height: 50px;
+		cursor: pointer;
+		position: absolute;
+		right: 0px;
+		top: 0px;
+	}
+	.topSearch_btn img{
+		width: 35px;
+		height: 35px;
+		padding: 5px;
+	}
 
-      }
-      .topSearch_b{
-         padding: 5px;
-         clear: left;
-      }
+	/* login 정보는 숨긴다 */
+	.topInfoSet{
+		display: none;
+	}
+
+	/* 나타나는 검색 버튼*/
+	.topSearch_box{	
+		display: none;
+		padding:10px 50px 10px 0px;
+		border:1px solid #D8D8D8;
+		position: relative;;
+		background-color: #fff;
+		z-index: 0;
+	}
+		.topSearch_l{
+			width: 100%;
+			height: 40px;
+			background-color: #fff;
+			float: left;
+		}
+		.topSearch_l input{
+			width: 95%;
+			padding: 5px;
+			border-radius: 5px;
+			margin:5px 0 0 5px;
+		}
+		.topSearch_r{
+			width: 40px;
+			height: 40px;
+			float: right;
+			background-color: gray;	
+			right: -50px;
+			margin-left: -200px;
+			position: relative;
+		}
+		.topSearch_r img{
+			width: 40px;
+			height: 40px;
+		}
+		.topSearch_b{
+			display: none;
+			border: 0px solid red;
+			clear: left;
+		}
+		.topSearch_box .topSearch_close{
+			display:none;
+			width:35px;
+			padding: 2px 0px;
+			float: right;
+			border: 1px solid #D8D8D8;
+			font-size: 8pt;
+			position: relative;
+			right: -50px;
+			margin-left: -50px;
+			margin-top: -10px;
+			cursor: pointer;
+		}
+	.top_modal{
+		display: none;
+		background-color: rgba(0,0,0,0.4);
+		width: 100%;
+		height: 100%;
+		top:0;
+		position: fixed;
+		z-index:1;
+	}
+
+	.nav-list{
+		width: 35px;
+		height: 35px;
+		margin:5px;
+		cursor: pointer;
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		background-image: url("../images/list.png");
+		background-size: cover;
+	}
+	section{
+		margin-top: 50px;
+	}
+
+}
