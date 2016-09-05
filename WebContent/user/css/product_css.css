@@ -486,6 +486,69 @@ div.sub_image ul li{
  }
 
  
+ 
+ 
+.container_2{
+  display: block;
+  
+  width: 1140px;
+  height: 300px;
+  
+  margin: auto;
+
+}
+.prod_hr_2{
+  display: block;
+  margin: auto;
+  width: 1070px;
+  height: 20px;
+  border-bottom: 1px solid black;
+  text-align: center;
+  margin-bottom: 45px;
+}
+.prod_hr_2 span{
+  font-size: 40px;
+  padding: 0 10px;
+  background-color: #FFFFFF;
+}
+.prod_list_2{
+  /*border: 1px solid black;*/
+  text-align: center;
+}
+.prod_list_2 .card{
+  width: 340px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  margin: 0 17px 10px ;
+  /*border: 1px solid red;*/
+}
+.prod_list_2 .card h3{
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 0;
+}
+.prod_list_2 .card h4{
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+.prod_list_2 .card .price{
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+.container_2 .category_hr{
+	display: block;
+  	margin: auto;
+	width: 1070px;
+	 border-bottom: 1px solid black;
+}
+ 
+ 
+ 
+ 
+ 
  *{margin: 0px;padding: 0px;}
 
 @media (min-width: 1025px){

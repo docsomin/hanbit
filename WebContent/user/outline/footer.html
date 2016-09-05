@@ -1,27 +1,45 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html>
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta charset="UTF-8">
 	<title>footer</title>
 	<style>
-	
+
 	*{margin: 0px;padding: 0px;}
+
 	/*모니터에서 실행*/
 	@media (min-width: 1025px){
+
+		footer{
+			background-color: #292a2c;
+		}
 		table td{
-			border:1px solid #000;
+			border: 1px solid #bfc0c0;
+			/*color: #bfc0c0;*/
 			padding: 3px 10px;
+		}
+		table td a{
+			text-decoration: none;
+			color: #bfc0c0;
 		}
 		div.footer-top{
 			width: 1140px;
 			margin: auto;
 		}
+
 		div.footer-section{
 			float:left;
 			width:265px;
-			height: 400px;
+			height: 350px;
 			margin-left: 20px;
+			padding-top: 30px;
+		}
+		p.footer-title{
+			color: white;
+		}
+		p{
+			color: #bfc0c0;
 		}
 		p.sns-icon{
 			margin: 10px;
@@ -30,9 +48,15 @@
 		p.sns-icon img{
 			margin: 0px 3px;
 		}
+		div.footer-subsection{
+			width: 260px;
+			height: 80px;
+			/*border: 1px solid red;*/
+			padding: 5px;
+		}
 		div.footer_img{
 			float: left;
-			padding:3px;
+			padding:3px 3px 3px 0;
 			clear: left;
 		}
 		p.footer-title{
@@ -42,13 +66,16 @@
 		}
 		p.footer-content{
 			font-size: 9pt;
-			height: 80px;
+			height: 70px;
+			padding-top: 10px;
+			margin-bottom: -10px;
 		}
 		p.footer_comm{
 			font-size: 9pt;
 			text-align: right;
 			margin-top: -10px;
-			border-bottom: 1px solid #000;
+			/*border-bottom: 1px solid #bfc0c0;*/
+
 		}
 		p.footer_comm span{
 			font-weight: bold;
@@ -61,10 +88,12 @@
 		}
 		#footer-sendBtn{
 			padding: 10px 30px 10px 30px;
-			background-color: #999;
+			background: white;
+			/*background-color: #999;*/
+			border: 2px solid #999;
 			font-size: 16pt;
 			cursor: pointer;
-			border: none;
+			color: black;;
 		}
 
 		div.footer-bottom{
@@ -72,7 +101,7 @@
 			width: 100%;
 			padding: 30px 0px;
 			text-align: center;
-			background-color: rgba(0,0,0,0.1);
+			background-color: #4A4A4A;
 		}
 	}
 	@media (max-width: 1025px){
@@ -97,6 +126,7 @@
 			border:1px solid #000;
 			padding: 8px 32px;
 		}
+
 		div.footer_img{
 			float: left;
 			padding:3px;
@@ -115,7 +145,7 @@
 			font-size: 9pt;
 			text-align: right;
 			margin-top: -10px;
-			border-bottom: 1px solid #000;
+			border-bottom: 1px solid #bfc0c0;
 		}
 		p.footer_comm span{
 			font-weight: bold;
@@ -163,35 +193,70 @@
 		</div>
 		<div class="footer-section">
 			<p class="footer-title">What is Lorem Ipsum?</p>
-			<div class="footer_img"><img src="http://placehold.it/70x85" alt="main1"></div>
-			<p class="footer-content">
-				Lorem Ipsum is simply dummy text of the printing
-				<p class="footer_comm"><span>0</span> Comment</p>
-			</p>
-			
-			<div class="footer_img"><img src="http://placehold.it/70x80" alt="main1"></div>
-			<p class="footer-content">
-				Lorem Ipsum is simply dummy text of the printing
-				<p class="footer_comm"><span>0</span> Comment</p>
-			</p>
-			
-			<div class="footer_img"><img src="http://placehold.it/70x80" alt="main1"></div>
-			<p class="footer-content">
-				Lorem Ipsum is simply dummy text of the printing
-				<p class="footer_comm"><span>0</span> Comment</p>
-			</p>
-			
+
+			<div class="footer-subsection">
+				<div class="footer_img"><img src="http://placehold.it/70x85" alt="main1"></div>
+				<p class="footer-content">
+					Lorem Ipsum is simply dummy text of the printing
+					<p class="footer_comm"><span>0</span> Comment</p>
+				</p>
+			</div>
+			<div class="footer-subsection">
+				<div class="footer_img"><img src="http://placehold.it/70x80" alt="main1"></div>
+				<p class="footer-content">
+					Lorem Ipsum is simply dummy text of the printing
+					<p class="footer_comm"><span>0</span> Comment</p>
+				</p>
+			</div>
+			<div class="footer-subsection">
+				<div class="footer_img"><img src="http://placehold.it/70x80" alt="main1"></div>
+				<p class="footer-content">
+					Lorem Ipsum is simply dummy text of the printing
+					<p class="footer_comm"><span>0</span> Comment</p>
+				</p>
+			</div>
 		</div>
 		<div class="footer-section">
 			<p class="footer-title">What is Lorem Ipsum?</p>
 			<p>
 				<table border="0" cellpadding="0" cellspacing="10">
-					<tr><td>TAG</td><td>TAG</td><td>TAG</td><td>TAG</td></tr>
-					<tr><td>TAG</td><td>TAG</td><td>TAG</td><td>TAG</td></tr>
-					<tr><td>TAG</td><td>TAG</td><td>TAG</td><td>TAG</td></tr>
-					<tr><td>TAG</td><td>TAG</td><td>TAG</td><td>TAG</td></tr>
-					<tr><td>TAG</td><td>TAG</td><td>TAG</td><td>TAG</td></tr>
-					<tr><td>TAG</td><td>TAG</td><td>TAG</td><td>TAG</td></tr>
+
+					<tr>
+						<td><a href="#">TAG</a></td>
+						<td><a href="#">TAG</a></td>
+						<td><a href="#">TAG</a></td>
+						<td><a href="#">TAG</a></td>
+					</tr>
+					<tr>
+						<td><a href="#">TAG</a></td>
+						<td><a href="#">TAG</a></td>
+						<td><a href="#">TAG</a></td>
+						<td><a href="#">TAG</a></td>
+					</tr>
+					<tr>
+						<td><a href="#">TAG</a></td>
+						<td><a href="#">TAG</a></td>
+						<td><a href="#">TAG</a></td>
+						<td><a href="#">TAG</a></td>
+					</tr>
+					<tr>
+						<td><a href="#">TAG</a></td>
+						<td><a href="#">TAG</a></td>
+						<td><a href="#">TAG</a></td>
+						<td><a href="#">TAG</a></td>
+					</tr>
+					<tr>
+						<td><a href="#">TAG</a></td>
+						<td><a href="#">TAG</a></td>
+						<td><a href="#">TAG</a></td>
+						<td><a href="#">TAG</a></td>
+					</tr>
+					<tr>
+						<td><a href="#">TAG</a></td>
+						<td><a href="#">TAG</a></td>
+						<td><a href="#">TAG</a></td>
+						<td><a href="#">TAG</a></td>
+					</tr>
 				</table>
 
 			</p>

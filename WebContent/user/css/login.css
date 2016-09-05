@@ -4,15 +4,13 @@
 @font-face {
     font-family: 'NotoSans-Regular';
     src: url(../fonts/NotoSans-Regular.ttf) format('truetype');
-    
+
 }
 
 body{
-	
 }
 
 body,h6,p {
-	
 	font-family: NotoSans-Regular;
 }
 
@@ -23,7 +21,7 @@ body,h6,p {
 
 }
 .container{
-	
+
 	background-repeat:no-repeat;
 	display: block;
 	width: 1140px;
@@ -44,12 +42,12 @@ nav{
 nav img{
 	width: 30px;
 	height: 29px;
-	
+
 }
 section img {
 	display: block;
 	margin: auto;
-
+  
 }
 
 section.input{
@@ -62,7 +60,7 @@ section.input{
 }
 section.input .warning_password, .warning_id{
 	display:none;
-	
+
 }
 
 input[type=text], input[type=password] {
@@ -95,15 +93,17 @@ input[type=submit]{
     margin: auto;
     cursor: pointer;
     font-size: 17px;
+    color: white;
 }
 section.login_pg{
-
+  color: white;
 	text-align: center;
-	font-weight: normal;
+	font-weight: 100;
 	margin-top: -5px;
 }
 section.login_pg a{
 	text-decoration: underline;
 	color: white;
 	font-weight: bold;
+
 }
