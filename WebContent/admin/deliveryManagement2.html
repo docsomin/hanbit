@@ -3,14 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<script src="http://code.jquery.com/jquery-latest.js"></script>
+
+
+<script type="text/javascript" src="../js/jquery-3.1.0.min.js"></script>
+<script src="../js/adminHeader.js"></script>
+<link href="../css/adminHeader.css" rel="stylesheet" type="text/css">
 <script>
-function openLeftMenu() {
-    document.getElementById("leftMenu").style.display = "block";
-}
-function closeLeftMenu() {
-    document.getElementById("leftMenu").style.display = "none";
-}
+
 $(document).ready(function(){
 		var flag=true;
 		$('.btn_item').click(function(){
@@ -94,24 +93,12 @@ $(document).ready(function(){
 	
 </script>
 <style>
- @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
  *{
- line-height:30px;
+
  }
   body {font-family: 'Nanum Gothic';}
-	header ul{
-		background:gray;
-		width:100%;
-		height:50px;
-	}
-	header li{
-		display:block;
-		padding:10px;
-		float:left;
-		font-size:20px;
-		font-family:"NotoSans-Regular";
-		font-weight:bold;
-	}
+	
 	input.date{
 		width:150px;
 	}
@@ -119,12 +106,18 @@ $(document).ready(function(){
 		width:50px;
 	}
 	
-	
-	
+	#main_container{
+		padding:0px; background:#f1f1f1; width:80%; margin:auto;
+		border:1px solid #b9c2cc;
+	}
+	.sub_container{
+		height:800px;
+		border-top:1px solid #b9c2cc;
+	}
 	div.container{
 	width:auto;
 		background:white;
-		border:1px solid gray;
+		border:1px solid #b9c2cc;
 		margin:10px;
 	}
 	div.container div{
@@ -133,14 +126,13 @@ $(document).ready(function(){
 	div.container select{
 		width:100%;
 	}
-	
-	
 	div.address, .client, .order_date, .order_status{
 		width:90%;
 	}
 	div.address div.address_from_container,div.address div.address_to_container{
-		display:inline-block;
-		margin: 20px 10px;
+		float:left;
+		display:block;
+		margin: 10px;
 		width:45%;
 		position:relative;
 	}
@@ -148,7 +140,6 @@ $(document).ready(function(){
 		position:relative;
 	}
 	div.address_from_form, div.address_to_form{
-		float:left;
 		width:300px;
 		height:100px;
 	}
@@ -157,11 +148,17 @@ $(document).ready(function(){
 	
 	
 	
+	.side_container{
+		width:30%; height:auto;  margin:0px 10px;padding:0px;
+	}
+	.side_container div{
+		background:white;
+	}
 	
 
 	div.order_item_container{
 		position:relative;
-		border-bottom:1px solid gray;
+		border-bottom:1px solid #b9c2cc;
 		height:40px;
 		margin:0px;
 	}
@@ -178,23 +175,30 @@ $(document).ready(function(){
 		height:30px;
 	}
 	
+	.order_item_list, .order_work, .order_work_confirm, .order_memo_title, .order_memo_list, .order_memo_add select, .order_memo_add textarea, .order_memo_add p{
+		width:100%;
+	}
 	
 	
 	div.order_item_list{
 		text-align:right;
-		width:90%;
+		
 		margin:0px auto;
 	}
-	
-	
+	.order_work{
+		 height:40px; padding:0px;border-bottom:1px solid gray; position:relative;
+	}
+	.order_work_confirm{
+		position:relative;height:55px;padding:0px;border-bottom:1px solid #b9c2cc
+	}
 	div.order_item_confirm_container{
-		border-top:1px solid gray;
+		border-top:1px solid #b9c2cc;
 		height:40px;
 		margin:0px;
 	}
 	div.order_item_confirm{
 		position:relative;
-		width:90%;
+		
 		margin:0px auto;
 	}
 	div.order_item_confirm select{
@@ -212,8 +216,23 @@ $(document).ready(function(){
 		margin:0px 5px;
 		height:30px;
 	}
+	.order_memo_title{
+		 padding:0px;height:40px; border-bottom:1px solid #b9c2cc; position:relative;
+	}
 	
+	.order_memo_list{
+		 height:auto; padding:0px;
+	}
+	.order_memo_add{
+		padding:0px;height:auto; border-top:1px solid #b9c2cc;
+	}	
 	
+	.order_memo_add textarea{
+		padding:0px; height:50px;
+	}
+	.order_memo_add select{
+	
+	}
 	
 	div.order_item_confirm button.cal_tax, div.order_item_confirm button.cal_sum, button.orderSave{
 		background:#0085ba;
@@ -229,36 +248,32 @@ $(document).ready(function(){
 		
 	
 </style>
-<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
 </head>
 
 <body>
 	<header>
-	<nav class="w3-sidenav w3-white w3-card-2 w3-animate-left" style="display:none" id="leftMenu">
-	  <a href="javascript:void(0)" onclick="closeLeftMenu()"
-	  class="w3-closenav w3-large"> 닫기 &times;</a>
-	  <a href="#">상품관리</a>
-	  <a href="#">회원관리</a>
-	  <a href="#">배송관리</a>
-	  <a href="#">게시판관리</a>
-	  <a href="#">매출/매입관리</a>
-	</nav>
+		<ul class="mainMenu">
+			<li style="padding:8px 15px"><a  href="#"><img class="showMenu" width="30" height="30"src="../images/HomButton.png"></a></li>
+			<li><a href="#">HOME</a></li>
+			<li><a href="#">상품추가</a></li>
+			<li><a href="#">배송현황</a></li>
+			<li style="float:right;"><a href="#">로그아웃</a></li>
+		</ul>
 
-<ul class="w3-navbar w3-black">
-  <li><span class="w3-opennav w3-xlarge" onclick="openLeftMenu()">&#9776;</span></li>
-  <li onclick="openLeftMenu()"><a href="#">홈페이지 이름</a></li>
-  <li><a href="#">상품추가</a></li>
-  <li><a href="#">배송현황</a></li>
-  <li class="w3-right"><a href="#">홈페이지</a></li>
-  <li class="w3-right"><a href="#">홈페이지</a></li>
-  <li class="w3-right"><a href="#">로그아웃</a></li>
-</ul>
-
+		<ul class="subMenu" style="border-top:0px">
+			<li><a href="productManagement.html" >상품관리</a></li>
+			<li><a href="ClientManagement.html">회원관리</a></li>
+			<li><a href="DeliveryManagement.html">배송관리</a></li>
+			<li ><a href="salesManagement.html" >매출/매입관리</a></li>
+		</ul>
 	</header>
 	
-	<h1>배송관리</h1>
 	
-	<div id="main_container" style="padding:0px; background:#f1f1f1; width:80%; margin:auto;">
+	
+	<div id="main_container" >
+		<h1 >배송관리</h1>
+		<div class="sub_container">
 		<div class="section_container" style="width:60%;height:auto; margin:0px 10px; top:0px;">
 			<div class="container" style="">
 				<div class="order_date">
@@ -282,7 +297,7 @@ $(document).ready(function(){
 					<p>고객</p>
 					<input style="width:100%;"type="text">
 				</div>
-				<div class="address">
+				<div class="address" style="height:170px;">
 					<div class="address_from_container">
 					 	<div> <label>청구 상세</label> <a href="#"><img class="address_from_change" style="width:30px; height:30px;" src="../images/write_icon.png"></a></div>
 						<div class="address_from_show">
@@ -333,28 +348,29 @@ $(document).ready(function(){
 					</div>
 			</div>
 		</div>
-		<div class="side_container" style="width:30%; height:auto;  margin:0px 10px;padding:0px; background:white;">
-			<div style="margin:10px; border:1px solid gray">
-				<div class="order_work" style="width:100%; height:40px; padding:10px;border-bottom:1px solid gray; position:relative;"><label style="float:left; display:block; width:auto; height:30px;">Order작업</label>  <a  style="float:right; " href="#"><img class="btn_work" src="../images/up_icon.png" style="width:30px; height:30px;"></a></div>
-				<div class="order_work_confirm"style="position:relative;width:100%;height:55px;padding:10px;border-bottom:1px solid gray">
+		<div class="side_container" >
+			<div style="margin:10px; border:1px solid #b9c2cc">
+				<div class="order_work"><label style="float:left; display:block; width:auto; height:30px;">Order작업</label>  <a  style="float:right; " href="#"><img class="btn_work" src="../images/up_icon.png" style="width:30px; height:30px;"></a></div>
+				<div class="order_work_confirm">
 					<select style="width:70%;float:left; ">
 						<option>작업</option>
 					</select>
 					<a href="#"><img  class="btn_work_reset" src="../images/reset_icon.png"  style="float:left;width:30px; height:30px;"></a></div>
-				<div class="order_work_delete" style="width:100%; height:40px; padding:10px;"><label style="color:red;">휴지통으로 이동하기</label> <button class="orderSave" >Order 저장하기</button></div>
+				<div class="order_work_delete" style="width:100%; height:40px; padding:0px;"><label style="color:red;">휴지통으로 이동하기</label> <button class="orderSave" >Order 저장하기</button></div>
 			</div>
-			<div  style="margin:10px; border:1px solid gray">
-				<div style="width:100%; padding:10px;height:40px; border-bottom:1px solid gray; position:relative;"><label style="float:left;">Order메모</label>  <a  style="float:right;"href="#" ><img class="btn_memo" src="../images/up_icon.png"  style="width:30px; height:30px;"></a></div>
-				<div class="order_memo_list" style="width:100%; height:auto; padding:10px;">메모가 아직 없습니다.</div>
-				<div class="order_memo_add" style="width:100%;padding:10px;height:auto; border-top:1px solid gray;"><p>메모 추가</p> <img src="">
-					<textarea style="width:100%; height:50px;" rows="10" cols="20"></textarea>
+			<div  style="margin:10px; border:1px solid #b9c2cc">
+				<div class="order_memo_title" ><label style="float:left;">Order메모</label>  <a  style="float:right;"href="#" ><img class="btn_memo" src="../images/up_icon.png"  style="width:30px; height:30px;"></a></div>
+				<div class="order_memo_list" >메모가 아직 없습니다.</div>
+				<div class="order_memo_add"><p>메모 추가</p> <img src="">
+					<textarea rows="10" cols="20"></textarea>
 					<br>
-					<select style="width:70%;">
+					<select>
 						<option>개인용 메모</option>
 					</select>
 					<button>추가하기</button>
 				</div>
 			</div>
+		</div>
 		</div>
 	</div>
 </body>

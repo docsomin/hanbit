@@ -2,105 +2,96 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<script type="text/javascript" src="../js/jquery-3.1.0.min.js"></script>
+<script src="../js/adminHeader.js"></script>
+<link href="../css/adminHeader.css" rel="stylesheet" type="text/css">
 <style>
-  @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+ 
   body {font-family: 'Nanum Gothic';}
+ .container{
+ 
+ 	width:80%;
+ 	height:80%;
+ 	margin:auto;
+ }
+  div.textbox{
+  	width:350px;
+  	height:250px;
+  	border:1px solid #b9c2cc;
+  	float:left;
+  	margin:50px;
+  	
+  }
+  div.subtitle{
+  	font-size:20px;
+ 	padding:10px;
+ 	vertical-align:center;
+  	height:20%;
+  	background: #ffffff;
+  	text-align:center;
+  	border-bottom:1px solid #b9c2cc;
+  }
+  div.text{
+  	padding:10px;
+  	height:80%;
+  }
+  
 </style>
 <title>관리 메인</title>
 </head>
 <body>
+	<header>
+		<ul class="mainMenu">
+			<li style="padding:8px 15px"><a  href="#"><img class="showMenu" width="30" height="30"src="../images/HomButton.png"></a></li>
+			<li><a href="ManageMain.html">HOME</a></li>  <!-- admin main -->
+			<li><a href="#">상품추가</a></li>
+			<li><a href="#">배송현황</a></li>
+			<li style="float:right;"><a href="#">로그아웃</a></li>
+		</ul>
+		<ul class="subMenu" style="border-top:0px">
+			<li><a href="productManagement.html" >상품관리</a></li>
+			<li><a href="ClientManagement.html">회원관리</a></li>
+			<li><a href="DeliveryManagement.html">배송관리</a></li>
+			<li ><a href="salesManagement.html" >매출/매입관리</a></li>
+		</ul>
+		
+	</header>
 
-<nav class="w3-sidenav w3-white w3-card-2 w3-animate-left" style="display:none" id="leftMenu">
-  <a href="javascript:void(0)" onclick="closeLeftMenu()"
-  class="w3-closenav w3-large"> 닫기 &times;</a>
-  <a href="#">상품관리</a>
-  <a href="#">회원관리</a>
-  <a href="#">배송관리</a>
-  <a href="#">게시판관리</a>
-  <a href="#">매출/매입관리</a>
-</nav>
 
-<ul class="w3-navbar w3-black">
-  <li><span class="w3-opennav w3-xlarge" onclick="openLeftMenu()">&#9776;</span></li>
-  <li onclick="openLeftMenu()"><a href="#">홈페이지 이름</a></li>
-  <li><a href="#">상품추가</a></li>
-  <li><a href="#">배송현황</a></li>
-  <li class="w3-right"><a href="#">홈페이지</a></li>
-  <li class="w3-right"><a href="#">홈페이지</a></li>
-  <li class="w3-right"><a href="#">로그아웃</a></li>
-</ul>
-
-<div class="w3-container">
-  <h2 style="padding-left:30px;">알림판</h2>
-  <div class="w3-row-padding">
-  <div class="w3-col s4">
-	<header class="w3-container w3-black w3-border">
-      <h3>최근 결재 내역</h3>
-    </header>
-    <div class="w3-container w3-border">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-  </div>
-  <div class="w3-col s4">
-	<header class="w3-container w3-black w3-border">
-      <h3>신규 게시글</h3>
-    </header>
-    <div class="w3-container w3-border">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-  </div>
-  <div class="w3-col s4">
-	<header class="w3-container w3-black w3-border">
-      <h3>이번 달 매출</h3>
-    </header>
-    <div class="w3-container w3-border">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-  </div>
-</div>
-</div>
-
-<br>
-<br>
-
-<div class="w3-container">
-  <div class="w3-row-padding">
-  <div class="w3-col s4">
-	<header class="w3-container w3-black w3-border">
-      <h3>최근 결재 내역</h3>
-    </header>
-    <div class="w3-container w3-border">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-  </div>
-  <div class="w3-col s4">
-	<header class="w3-container w3-black w3-border">
-      <h3>신규 게시글</h3>
-    </header>
-    <div class="w3-container w3-border">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-  </div>
-  <div class="w3-col s4">
-	<header class="w3-container w3-black w3-border">
-      <h3>이번 달 매출</h3>
-    </header>
-    <div class="w3-container w3-border">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-  </div>
-</div>
-</div>
-
+	<section>
+		
+		<div class="container">
+			<h2 style="margin-left:50px;">알림판</h2>
+			
+			
+			<div class="textbox">
+				<div class="subtitle">최근 결제 내역</div>
+				<div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+			</div>
+			<div class="textbox">
+				<div class="subtitle">신규 게시글</div>
+				<div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+			</div>
+			<div class="textbox">
+				<div class="subtitle">이번 달 매출</div>
+				<div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+			</div>
+	
+			<div class="textbox">
+				<div class="subtitle">최근 결제 내역</div>
+				<div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+			</div>
+			<div class="textbox">
+				<div class="subtitle">신규 게시글</div>
+				<div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+			</div>
+			<div class="textbox">
+				<div class="subtitle">이번 달 매출</div>
+				<div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+			</div>
+		</div>
+	</section>
      
-<script>
-function openLeftMenu() {
-    document.getElementById("leftMenu").style.display = "block";
-}
-function closeLeftMenu() {
-    document.getElementById("leftMenu").style.display = "none";
-}
-</script>
+
 </body>
 </html>

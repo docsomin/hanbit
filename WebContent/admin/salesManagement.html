@@ -4,24 +4,13 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 
+<script type="text/javascript" src="../js/jquery-3.1.0.min.js"></script>
+<script src="../js/adminHeader.js"></script>
+<link href="../css/adminHeader.css" rel="stylesheet" type="text/css">
 
-<script>
-function openLeftMenu() {
-    document.getElementById("leftMenu").style.display = "block";
-}
-function closeLeftMenu() {
-    document.getElementById("leftMenu").style.display = "none";
-}
-
-
-
-
-</script>
-
-<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 
 <style>
-	@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+	
   body {font-family: 'Nanum Gothic';}
 
 	li{
@@ -30,22 +19,7 @@ function closeLeftMenu() {
 	a:link,a:visited, a:active{
 		text-decoration:none;
 	}
-	
-	header ul{
-		background:gray;
-		
-		width:100%;
-		height:50px;
-		
-	}
-	header li{
-		display:block;
-		padding:10px;
-		float:left;
-		font-size:20px;
-		font-family:"NotoSans-Regular";
-		font-weight:bold;
-	}
+
 	section .graphUI{
 		position:relative;
 	}
@@ -67,62 +41,57 @@ function closeLeftMenu() {
 	}
 	
 	table{
-		border:1px solid black;
+		border:1px solid #b9c2cc;
 		border-collapse:collapse;
 	}
-	.btn td{
-		margin:0px;
-		padding:0px 10px;
-		
-	}
+	
 	.page_selector li{
 		padding:0px 10px;
-		border-right:1px solid black;
+		border-right:1px solid #b9c2cc;
 		display:inline-block;
 	}
 	.page_selector ul{
 		
 	}
+	.container{
 	
+	}
+	.sub_container{
+			border:1px solid #b9c2cc;
+			padding:auto;
+	}
+	#lineCanvas{
+		position:relative;overflow:auto;width:70%; height:500px; margin:0px auto; padding:0px; border:1px solid #b9c2cc;
+	}
 	
 </style>
 </head>
 <body>
- <header>
-<nav class="w3-sidenav w3-white w3-card-2 w3-animate-left" style="display:none" id="leftMenu">
-  <a href="javascript:void(0)" onclick="closeLeftMenu()"
-  class="w3-closenav w3-large"> 닫기 &times;</a>
-  <a href="#">상품관리</a>
-  <a href="#">회원관리</a>
-  <a href="#">배송관리</a>
-  <a href="#">게시판관리</a>
-  <a href="#">매출/매입관리</a>
-</nav>
+ 	<header>
+		<ul class="mainMenu">
+			<li style="padding:8px 15px"><a  href="#"><img class="showMenu" width="30" height="30"src="../images/HomButton.png"></a></li>
+			<li><a href="#">HOME</a></li>
+			<li><a href="#">상품추가</a></li>
+			<li><a href="#">배송현황</a></li>
+			<li style="float:right;"><a href="#">로그아웃</a></li>
+		</ul>
 
-<ul class="w3-navbar w3-black">
-  <li><span class="w3-opennav w3-xlarge" onclick="openLeftMenu()">&#9776;</span></li>
-  <li onclick="openLeftMenu()"><a href="#">홈페이지 이름</a></li>
-  <li><a href="#">상품추가</a></li>
-  <li><a href="#">배송현황</a></li>
-  <li class="w3-right"><a href="#">홈페이지</a></li>
-  <li class="w3-right"><a href="#">홈페이지</a></li>
-  <li class="w3-right"><a href="#">로그아웃</a></li>
-</ul>
+		<ul class="subMenu" style="border-top:0px">
+			<li><a href="productManagement.html" >상품관리</a></li>
+			<li><a href="ClientManagement.html">회원관리</a></li>
+			<li><a href="DeliveryManagement.html">배송관리</a></li>
+			<li ><a href="salesManagement.html" >매출/매입관리</a></li>
+		</ul>
 
 	</header>
  <section style="width:100%">
  	
-	 	<h1>매출 보고서</h1>
+	 	
+	 
+	 	
 	 	<div class="container" style="width:90%; margin:auto;">
-	 	<div class="btn" style="padding:0px 40px;">
-		 	<table border=1>
-		 		<tr>
-		 			<td><a href="">주문</a></td>
-		 			<td><a href="">고객</a></td>
-		 			<td><a href="">재고</a></td>
-		 		</tr>
-		 	</table>
-	 	</div>
+	 	<h1>매출 보고서</h1>
+	 	<div class="sub_container">
 	 	<div class="page_selector">
 	 		<ul>
 	 			<li><a href="#">년</a></li>
@@ -135,17 +104,18 @@ function closeLeftMenu() {
 	 	<div class="graphUI">
 	 		<div style="width:20%; height:510px; margin:0px auto; padding:0px; ">
 	 			<table border=1>
-	 				<tr><td style="border-top:1px solid black; border-right:5px solid blue;">이 기간 중 총 <br> <p class="total_price">1,200,000 ￦</p></td></tr>
+	 				<tr><td style="border-top:1px solid #b9c2cc; border-right:5px solid blue;">이 기간 중 총 <br> <p class="total_price">1,200,000 ￦</p></td></tr>
 	 				<tr><td style="border-right:5px solid lightgreen;"> 이 기간 중 순이익 <br> <p class="income_price">1,200,000 ￦</p></td></tr>
 	 				<tr><td style="border-right:5px solid yellow;">이 기간 중 환불 <br> <p class="refund_price">1,200,000 ￦</p></td></tr>
 	 				<tr><td style="border-right:5px solid red;">이 기간 중 할인 <br> <p class="discount_price">1,200,000 ￦</p></td></tr>
 	 				<tr><td style="border-right:5px solid black;">이 기간 중 총 <br> <p class="total_price">1,200,000 ￦</p></td></tr>
 	 			</table>
 	 		</div>
-	 		<div id="lineCanvas" style="position:relative;overflow:auto;width:70%; height:500px; margin:0px auto; padding:0px; border:1px solid black;">
+	 		<div id="lineCanvas" style="">
 	 		
 	 		
 	 		</div>
+	 	</div>
 	 	</div>
  	</div>
  

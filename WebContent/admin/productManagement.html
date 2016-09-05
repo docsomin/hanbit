@@ -4,39 +4,19 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 
+<script type="text/javascript" src="../js/jquery-3.1.0.min.js"></script>
+<script src="../js/adminHeader.js"></script>
+<link href="../css/adminHeader.css" rel="stylesheet" type="text/css">
+
 <script>
-function openLeftMenu() {
-    document.getElementById("leftMenu").style.display = "block";
-}
-function closeLeftMenu() {
-    document.getElementById("leftMenu").style.display = "none";
-}
+
 	
 </script>
-<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
-
 <style>
 
- @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
   body {font-family: 'Nanum Gothic';}
 
-	
-	
-	header ul{
-		background:gray;
-		
-		width:100%;
-		height:50px;
-		
-	}
-	header li{
-		display:block;
-		padding:10px;
-		float:left;
-		font-size:20px;
-		font-family:"NotoSans-Regular";
-		font-weight:bold;
-	}
 	table{
 		width:100%;
 	}
@@ -68,13 +48,13 @@ function closeLeftMenu() {
 		float:right;
 	}
 	aside table{
-		border-top:1px solid black;
-		border-left:1px solid black;
-		border-right:1px solid black;
-		border-bottom:1px solid black;
+		border-top:1px solid #b9c2cc;
+		border-left:1px solid #b9c2cc;
+		border-right:1px solid #b9c2cc;
+		border-bottom:1px solid #b9c2cc;
 	}
 	aside tr.title{
-		border-bottom:1px solid black;
+		border-bottom:1px solid #b9c2cc;
 	}
 	aside tr td{
 		text-align:center;		
@@ -88,7 +68,7 @@ function closeLeftMenu() {
 	aside tr img{
 		width:50px;
 		height:50px;
-		border:1px solid black;
+		border:1px solid #b9c2cc;
 	}
 	aside li img{
 		width:30px;
@@ -98,35 +78,38 @@ function closeLeftMenu() {
 		width:80%;
 		margin:auto;
 	}
+	.container{
+		height:375px;
+		border:1px solid #b9c2cc;
+	}
+	aside ul, aside table{
+		width:90%;
+		margin: 0px 50px;
+	}
 	
 </style>
 </head>
 <body>
 	<header>
-	<nav class="w3-sidenav w3-white w3-card-2 w3-animate-left" style="display:none" id="leftMenu">
-  <a href="javascript:void(0)" onclick="closeLeftMenu()"
-  class="w3-closenav w3-large"> 닫기 &times;</a>
-  <a href="#">상품관리</a>
-  <a href="#">회원관리</a>
-  <a href="#">배송관리</a>
-  <a href="#">게시판관리</a>
-  <a href="#">매출/매입관리</a>
-</nav>
+		<ul class="mainMenu">
+			<li style="padding:8px 15px"><a  href="#"><img class="showMenu" width="30" height="30"></a></li>
+			<li><a href="#">HOME</a></li>
+			<li><a href="#">상품추가</a></li>
+			<li><a href="#">배송현황</a></li>
+			<li style="float:right;"><a href="#">로그아웃</a></li>
+		</ul>
 
-<ul class="w3-navbar w3-black">
-  <li><span class="w3-opennav w3-xlarge" onclick="openLeftMenu()">&#9776;</span></li>
-  <li onclick="openLeftMenu()"><a href="#">홈페이지 이름</a></li>
-  <li><a href="#">상품추가</a></li>
-  <li><a href="#">배송현황</a></li>
-  <li class="w3-right"><a href="#">홈페이지</a></li>
-  <li class="w3-right"><a href="#">홈페이지</a></li>
-  <li class="w3-right"><a href="#">로그아웃</a></li>
-</ul>
+		<ul class="subMenu" style="border-top:0px">
+			<li><a href="productManagement.html" >상품관리</a></li>
+			<li><a href="ClientManagement.html">회원관리</a></li>
+			<li><a href="DeliveryManagement.html">배송관리</a></li>
+			<li ><a href="salesManagement.html" >매출/매입관리</a></li>
+		</ul>
 
 	</header>
 	<aside>
 		<h1>상품 관리</h1> <button>상품 추가하기</button>
-		
+		<div class="container">
 		<ul>
 			<li><a href="">모두</a></li>
 			<li><a href="">가입순</a></li>
@@ -152,7 +135,7 @@ function closeLeftMenu() {
 			<tr>
 				<td><input type="checkbox"></td>
 				<td><img src=""></td>
-				<td>Specialized Ultima Vibe 200</td>
+				<td><a href="../user/product/product_view.html">Specialized Ultima Vibe 200</a></td>
 				<td>0000010</td>
 				<td>재고 있음</td>
 				<td>670,000</td>
@@ -164,7 +147,7 @@ function closeLeftMenu() {
 			<tr>
 				<td><input type="checkbox"></td>
 				<td><img src=""></td>
-				<td>Specialized Ultima Vibe 200</td>
+				<td><a href="../user/product/product_view.html">Specialized Ultima Vibe 200</a></td>
 				<td>0000010</td>
 				<td>재고 있음</td>
 				<td>670,000</td>
@@ -176,7 +159,7 @@ function closeLeftMenu() {
 			<tr>
 				<td><input type="checkbox"></td>
 				<td><img src=""></td>
-				<td>Specialized Ultima Vibe 200</td>
+				<td><a href="../user/product/product_view.html">Specialized Ultima Vibe 200</a></td>
 				<td>0000010</td>
 				<td>재고 있음</td>
 				<td>670,000</td>
@@ -188,7 +171,7 @@ function closeLeftMenu() {
 			<tr>
 		<td><input type="checkbox"></td>
 				<td><img src=""></td>
-				<td>Specialized Ultima Vibe 200</td>
+				<td><a href="../user/product/product_view.html">Specialized Ultima Vibe 200</a></td>
 				<td>0000010</td>
 				<td>재고 있음</td>
 				<td>670,000</td>
@@ -217,7 +200,7 @@ function closeLeftMenu() {
 			
 			<li class="right"><p class="clientCount">25아이템</p></li>
 		</ul>
-		
+		</div>
 		<script>
 			function check(){
 					var a = document.getElementsByTagName('input[type=checkbox]');
